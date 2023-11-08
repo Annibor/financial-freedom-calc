@@ -14,3 +14,18 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.OPEN('financial-freedom-calc')
 
 
+def get_user_data():
+    """
+    Collect user data like name, email and address.
+    """
+    name = input('Enter your name: ')
+    while True:
+        try:
+            email = input('Enter your email: ')
+            if "@" in email and "." in email and email.find("@") < email.rfind('.'):
+                break
+        except:
+            print('Invalid email address, please try again!')
+
+get_user_data()
+    
