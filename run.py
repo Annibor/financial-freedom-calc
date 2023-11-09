@@ -21,6 +21,9 @@ def get_user_data():
     """
     Collect user data like name, email, and address.
     """
+    print('Welcome to the financial freedom calculator!')
+    print('This program will help you calculate the number of years it takes to reach financial freedom, or how much you need to save every month to reach financial freedom.')
+
     name = input('Enter your name: ')
     while True:
         email = input('Enter your email: ')
@@ -66,4 +69,16 @@ def calcualte_years_to_financial_freedom(initial_savings,
         initial_savings = initial_savings + (initial_savings * monthly_savings_percentage)
         years_to_financial_freedom = years_to_financial_freedom + 1
 
-    return
+    return years_to_financial_freedom
+
+def choose_what_to_calculate ():
+    print('1. Would you like to calculate the number of years it takes to reach financial freedom, or 2. how much you need to save every month to reach financial freedom? ')
+    choice = input('Enter 1 or 2: \n')
+    while choice!= '1' and choice!= '2':
+        print('Please enter 1 or 2')
+        choice = input('Enter 1 or 2: \n')
+        
+        if choice == '1':
+        
+      
+          
