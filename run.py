@@ -37,3 +37,33 @@ def get_user_data():
             print('Invalid data: age must be in digits, please try again!')
 
 get_user_data()
+
+def calcualte_years_to_financial_freedom(initial_savings,
+        monthly_savings, target_goal, annual_interest_rate, monthly_savings_percentage):
+    """
+    Calculate the years it takes to reach financial freedom.
+
+    Args: initial_savings (float): The initial savings amount in euros.
+    Args: monthly_savings (float): The monthly savings amount in euros.
+    Args: target_goal (float): The target saving goal in euros.
+    Args: annual_interest_rate (float): The annual interest rate as a percentage.
+    Args: monthly_savings_percentage (float): The monthly savings percentage.
+    
+    Returns: years_to_financial_freedom (int): The number of years it 
+    takes to reach financial freedom.
+    """
+
+    years_to_financial_freedom = 0
+    initial_savings = float(initial_savings)
+    monthly_savings = float(monthly_savings)
+    target_goal = float(target_goal)
+    annual_interest_rate = float(annual_interest_rate)
+    monthly_savings_percentage = float(monthly_savings_percentage)
+    annual_interest_rate = annual_interest_rate / 100
+    monthly_savings_percentage = monthly_savings_percentage / 100
+
+    while initial_savings < target_goal:
+        initial_savings = initial_savings + (initial_savings * monthly_savings_percentage)
+        years_to_financial_freedom = years_to_financial_freedom + 1
+
+    return
