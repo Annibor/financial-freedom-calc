@@ -41,7 +41,7 @@ def get_user_data():
 
 get_user_data()
 
-def calcualte_years_to_financial_freedom(initial_savings,
+def calculate_years_to_financial_freedom(initial_savings,
         monthly_savings, target_goal, annual_interest_rate, monthly_savings_percentage):
     """
     Calculate the years it takes to reach financial freedom.
@@ -72,13 +72,40 @@ def calcualte_years_to_financial_freedom(initial_savings,
     return years_to_financial_freedom
 
 def choose_what_to_calculate ():
-    print('1. Would you like to calculate the number of years it takes to reach financial freedom, or 2. how much you need to save every month to reach financial freedom? ')
+    """
+    Make user choose what to calculate.
+    """
+    print('1. Would you like to calculate the number of years it \
+          takes to reach financial freedom, or 2. how much you need \
+          to save every month to reach financial freedom? "')
     choice = input('Enter 1 or 2: \n')
     while choice!= '1' and choice!= '2':
         print('Please enter 1 or 2')
         choice = input('Enter 1 or 2: \n')
-        
+
         if choice == '1':
+
+            initial_savings = input('Enter the initial savings amount in euros: ')
+            monthly_savings = input('Enter the monthly savings amount in euros: ')
+            target_goal = input('Enter the target saving goal in euros: ')
+            annual_interest_rate = input('Enter the annual interest rate as a percentage: ')
+            monthly_savings_percentage = input('Enter the monthly savings percentage: ')
+            years_to_financial_freedom = calculate_years_to_financial_freedom(initial_savings,
+                monthly_savings, target_goal, annual_interest_rate, monthly_savings_percentage)
+            print(f'Hi these {name}! The number of years it takes to reach financial freedom is: {years_to_financial_freedom}')
+
+        elif choice == '2':
+            
+            initial_savings = input('Enter the initial savings amount in euros: ')
+            target_goal = input('Enter the target goal in euros: ')
+            annual_interest_rate = input('Enter the annual interest rate as a percentage: ')
+            monthly_savings_percentage = input('Enter the monthly savings percentage: ')
+
+            required_monthly_savings = calculate_required_monthly_savings()
+            print(f'Hi these {name}! The amount you need to save every month to reach financial freedom is: {required_monthly_savings}')
+
+
+
         
       
           
