@@ -22,7 +22,9 @@ def get_user_data():
     Collect user data like name, email, and address.
     """
     print('Welcome to the financial freedom calculator!')
-    print('This program will help you calculate the number of years it takes to reach financial freedom, or how much you need to save every month to reach financial freedom.')
+    print('This program will help you calculate the number of years \
+          it takes to reach financial freedom, or how much you need to \
+          save every month to reach financial freedom.')
 
     name = input('Enter your name: ')
     while True:
@@ -39,7 +41,22 @@ def get_user_data():
         else:
             print('Invalid data: age must be in digits, please try again!')
 
-get_user_data()
+      user_data = {
+        'name': name,
+        'email': email,
+        'age': age
+    }
+
+    user_data_sheet = SHEET.sheet1
+    user_data_sheet.append_row([user_data['name'], user_data['email'], user_data['age']])
+
+    return user_data
+
+def update_google_sheet(data, worksheet):
+    worksheet_to_update = SHEET.worksheet(worksheet)
+    worksheet_to_update.append_row([data['name'], data['email'], data['age']])
+    print('Data successfully updated!')
+
 
 def calculate_years_to_financial_freedom(initial_savings,
         monthly_savings, target_goal, annual_interest_rate, monthly_savings_percentage):
@@ -71,6 +88,7 @@ def calculate_years_to_financial_freedom(initial_savings,
 
     return years_to_financial_freedom
 
+
 def choose_what_to_calculate ():
     """
     Make user choose what to calculate.
@@ -92,20 +110,16 @@ def choose_what_to_calculate ():
             monthly_savings_percentage = input('Enter the monthly savings percentage: ')
             years_to_financial_freedom = calculate_years_to_financial_freedom(initial_savings,
                 monthly_savings, target_goal, annual_interest_rate, monthly_savings_percentage)
-            print(f'Hi these {name}! The number of years it takes to reach financial freedom is: {years_to_financial_freedom}')
+            print(f'Hi these {name}! The number of years it takes \
+                  to reach financial freedom is: {years_to_financial_freedom}')
 
         elif choice == '2':
-            
+
             initial_savings = input('Enter the initial savings amount in euros: ')
             target_goal = input('Enter the target goal in euros: ')
             annual_interest_rate = input('Enter the annual interest rate as a percentage: ')
             monthly_savings_percentage = input('Enter the monthly savings percentage: ')
 
             required_monthly_savings = calculate_required_monthly_savings()
-            print(f'Hi these {name}! The amount you need to save every month to reach financial freedom is: {required_monthly_savings}')
-
-
-
-        
-      
-          
+            print(f'Hi these {name}! The amount you need to save every \
+                  month to reach financial freedom is: {required_monthly_savings}')
