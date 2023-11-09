@@ -139,8 +139,9 @@ def choose_what_to_calculate ():
             annual_interest_rate = input('Enter the annual interest rate as a percentage: ')
             monthly_savings_percentage = input('Enter the monthly savings percentage: ')
             years_to_financial_freedom = calculate_years_to_financial_freedom(user_data[name], initial_savings, monthly_savings, target_goal, annual_interest_rate, monthly_savings_percentage)
-            print(f'Hi these {user_data['name']}! The number of years it takes \
+            print('Hi these {user_data['name']}! The number of years it takes \
                   to reach financial freedom is: {years_to_financial_freedom}')
+            update_google_sheet(user_data)
 
         elif choice == '2':
 
@@ -150,5 +151,13 @@ def choose_what_to_calculate ():
             monthly_savings_percentage = input('Enter the monthly savings percentage: ')
 
             required_monthly_savings = calculate_required_monthly_savings()
-            print(f'Hi these  {user_data['name']}! The amount you need to save every \
-                  month to reach financial freedom is: {required_monthly_savings}')
+            print(f'Hi these  {user_data['name']}! The amount you need to save every month to reach financial freedom is: {required_monthly_savings}')
+            update_google_sheet(user_data)
+
+def main ():
+    user_data = get_user_data()
+    choose_what_to_calculate()
+    update_google_sheet(user_data)
+
+if __name__ == '__main__':
+    main()
