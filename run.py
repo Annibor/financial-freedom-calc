@@ -89,9 +89,39 @@ def calculate_years_to_financial_freedom(initial_savings,
     return years_to_financial_freedom
 
 
+def calculate_required_monthly_savings(initial_savings,
+    target_goal, annual_interest_rate_two, monthly_savings_percentage_two):
+    """
+    Calculates monthly savings required to reach financial freedom 
+    within a given target goal of years.
+
+    Args: initial_savings (float): The initial savings amount in euros.
+        target_goal (float): The target saving goal in euros.
+        annual_interest_rate_two (float): The annual interest rate as a percentage.
+        monthly_savings_percentage_two (float): The monthly savings percentage.
+
+    Returns: monthly_savings (float): The monthly savings amount in euros.
+
+    """
+    initial_savings = float(initial_savings)
+    target_goal = float(target_goal)
+    annual_interest_rate_two = float(annual_interest_rate_two)
+    monthly_savings_percentage_two = float(monthly_savings_percentage_two)
+    annual_interest_rate_two = annual_interest_rate_two / 100
+    monthly_savings_percentage_two = monthly_savings_percentage_two / 100
+    monthly_savings = initial_savings * monthly_savings_percentage_two
+    
+    while monthly_savings < target_goal:
+        monthly_savings = monthly_savings + (monthly_savings * annual_interest_rate_two)
+        
+    return monthly_savings
+
+
 def choose_what_to_calculate ():
     """
     Make user choose what to calculate.
+
+    Returns: choice (int): The user's choice.
     """
     print('1. Would you like to calculate the number of years it \
           takes to reach financial freedom, or 2. how much you need \
@@ -108,9 +138,8 @@ def choose_what_to_calculate ():
             target_goal = input('Enter the target saving goal in euros: ')
             annual_interest_rate = input('Enter the annual interest rate as a percentage: ')
             monthly_savings_percentage = input('Enter the monthly savings percentage: ')
-            years_to_financial_freedom = calculate_years_to_financial_freedom(initial_savings,
-                monthly_savings, target_goal, annual_interest_rate, monthly_savings_percentage)
-            print(f'Hi these {name}! The number of years it takes \
+            years_to_financial_freedom = calculate_years_to_financial_freedom(user_data[name], initial_savings, monthly_savings, target_goal, annual_interest_rate, monthly_savings_percentage)
+            print(f'Hi these {user_data['name']}! The number of years it takes \
                   to reach financial freedom is: {years_to_financial_freedom}')
 
         elif choice == '2':
@@ -121,5 +150,5 @@ def choose_what_to_calculate ():
             monthly_savings_percentage = input('Enter the monthly savings percentage: ')
 
             required_monthly_savings = calculate_required_monthly_savings()
-            print(f'Hi these {name}! The amount you need to save every \
+            print(f'Hi these  {user_data['name']}! The amount you need to save every \
                   month to reach financial freedom is: {required_monthly_savings}')
