@@ -27,4 +27,4 @@ def user_data():
           'to reach finanicial freedom, or how much you need to save'
           'each month to reach the finanicial freedom in a certain years.\n')
 
-    return name
+print(user_data())
