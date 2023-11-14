@@ -37,6 +37,13 @@ def choose_what_to_calc():
           'freedom in a certain years\n')
     choice = input('Enter your choice: \n')
     if choice == '1':
+        initial_savings = float(input('Please enter your initial savings: \n'))
+        monthly_savings = float(input('Please enter your monthly savings: \n'))
+        financial_goal = float(input('Please enter your financial goal: \n'))
+        annual_interest = float(input('Please enter your annual interest rate: \n'))
+        monthly_savings_percent = float(input('Please enter your monthly savings percentage: \n'))
+        years_to_financial_freedom = calc_years_to_financial_freedom(initial_savings, monthly_savings, financial_goal, annual_interest, monthly_savings_percent)
+        
         how_many_years()
     elif choice == '2':
         how_much_to_save_each_month()
