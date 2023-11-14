@@ -43,10 +43,19 @@ def choose_what_to_calc():
         annual_interest = float(input('Please enter your annual interest rate: \n'))
         monthly_savings_percent = float(input('Please enter your monthly savings percentage: \n'))
         years_to_financial_freedom = calc_years_to_financial_freedom(initial_savings, monthly_savings, financial_goal, annual_interest, monthly_savings_percent)
-        
-        how_many_years()
+
+        return years_to_financial_freedom
     elif choice == '2':
-        how_much_to_save_each_month()
+        initial_savings_two = input('Please enter your initial savings: \n'))
+        target_goal_two = input('Please enter your target goal: \n'))
+        monthly_savings_percent_two = input('Please enter your monthly savings percentage: \n'))
+        annual_interest_two = input('Please enter your annual interest rate: \n'))
+        taget_years_to_freedom = input('Please enter your taget years to freedom: \n'))
+        required_monthly_savings = calc_required_monthly_savings(initial_savings_two, target_goal_two, monthly_savings_percent_two, annual_interest_two, taget_years_to_freedom)
+
+        return required_monthly_savings
     else:
         print('Invalid choice. Please try again.\n')
         choose_what_to_calc()
+
+    
