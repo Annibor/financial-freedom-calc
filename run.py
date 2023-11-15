@@ -1,6 +1,7 @@
 """
 Import needed for the code
 """
+from calculations import CalcYearsToFinancialFreedom
 import gspread
 from google.oauth2.service_account import Credentials
 

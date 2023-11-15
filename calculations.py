@@ -15,5 +15,18 @@ class CalcYearsToFinancialFreedom:
         Calculates the years it takes to reach the finanicial freedom.
 
         """
+      years_to_target = 0
+      current_savings = self.initial_savings
       while initial_savings < self.financial_goal:
+        monthly_interest = self.annual_interest / 12
+        current_savings = current_savings + monthly_interest
+        current_savings = current_savings * (self.monthly_savings_percent / 100)
+        current_savings = current_savings + self.monthly_savings
+        years_to_target += 1
+
+        if current_savings > self.financial_goal:
+            break
+        
+        print(f'Years to target: {years_to_target} \n')
+
         
