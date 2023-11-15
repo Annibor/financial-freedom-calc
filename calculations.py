@@ -14,8 +14,8 @@ class CalcYearsToFinancialFreedom:
             self.monthly_savings_percent = float(monthly_savings_percent)
         except ValueError as exc:
             raise ValueError('Invalid input.Answers must be numeric values. Please try again.\n') from exc
-        
-    
+
+
     def calc_years_to_financial_freedom(self):
         """
         Calculates the years it takes to reach the finanicial freedom.
@@ -31,15 +31,15 @@ class CalcYearsToFinancialFreedom:
             years_to_target += 1
 
         return years_to_target
-    
 
-        
+
+
 class CalcRequiredMonthlySavings:
     """
     Calculates the required monthly savings to reazch a specific financial target.
     """
     def __init__(self, initial_savings_two, target_goal_two, monthly_savings_percent_two, annual_interest_two, target_years_to_freedom):
-        try: 
+        try:
             self.initial_savings_two = float(initial_savings_two)
             self.target_goal_two = float(target_goal_two)
             self.monthly_savings_percent_two = float(monthly_savings_percent_two)
