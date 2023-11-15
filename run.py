@@ -1,10 +1,10 @@
 """
 Import needed for the code
 """
-from calculations import CalcYearsToFinancialFreedom
-from calculations import CalcRequiredMonthlySavings
 import gspread
 from google.oauth2.service_account import Credentials
+from calculations import CalcYearsToFinancialFreedom
+from calculations import CalcRequiredMonthlySavings
 
 
 SCOPE = [
@@ -60,4 +60,16 @@ def choose_what_to_calc():
         print('Invalid choice. Please try again.\n')
         choose_what_to_calc()
 
+
+user_data()
+calculation_choice = choose_what_to_calc()
+
+if isinstance(calculation_choice, CalcYearsToFinancialFreedom):
+    result = calculation_choice.calc_years_to_financial_freedom()
+    print(f'{name}, it will take {result} years to reach the finanicial freedom.\n')
+
+elif isinstance(calculation_choice, CalcRequiredMonthlySavings):
+    result = calculation_choice.calc_required_monthly_savings()
+    print(f'{name}, you will need to save {result:.2f} euros every month to reach your financial goal.\n')
+          
     
