@@ -38,12 +38,10 @@ class CalcRequiredMonthlySavings:
     """
     Calculates the required monthly savings to reazch a specific financial target.
     """
-    def __init__(self, initial_savings_two, target_goal_two, monthly_savings_percent_two, annual_interest_two, target_years_to_freedom):
+    def __init__(self, initial_savings_two, target_goal_two, target_years_to_freedom):
         try:
             self.initial_savings_two = float(initial_savings_two)
             self.target_goal_two = float(target_goal_two)
-            self.monthly_savings_percent_two = float(monthly_savings_percent_two)
-            self.annual_interest_two = float(annual_interest_two)
             self.target_years_to_freedom = float(target_years_to_freedom)
         except ValueError as exc:
             raise ValueError('Invalid input.Answers must be numeric values. Please try again.\n') from exc
@@ -52,8 +50,7 @@ class CalcRequiredMonthlySavings:
         """
         Calculates the required monthly savings to reazch a specifiv financial target.
         """
-        monthly_savings_percent_two = self.monthly_savings_percent_two / 100 / 12
         periods = self.target_years_to_freedom * 12
-        monthly_savings_required = (self.target_goal_two / ((1+ self.annual_interest_two / 12) ** periods - 1)) / monthly_savings_percent_two
+        monthly_savings_required = (self.target_goal_two - self.initial_savings_two) / periods
 
         return monthly_savings_required

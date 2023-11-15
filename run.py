@@ -51,10 +51,8 @@ def choose_what_to_calc():
     elif choice == '2':
         initial_savings_two = float(input('Please enter your initial savings: \n'))
         target_goal_two = float(input('Please enter your target goal: \n'))
-        monthly_savings_percent_two = float(input('Please enter your monthly savings percentage: \n'))
-        annual_interest_two = float(input('Please enter your annual interest rate: \n'))
         taget_years_to_freedom = float(input('Please enter your taget years to freedom: \n'))
-        required_monthly_savings = CalcRequiredMonthlySavings(initial_savings_two, target_goal_two, monthly_savings_percent_two, annual_interest_two, taget_years_to_freedom)
+        required_monthly_savings = CalcRequiredMonthlySavings(initial_savings_two, target_goal_two, taget_years_to_freedom)
 
         return required_monthly_savings
     else:
