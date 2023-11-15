@@ -45,6 +45,6 @@ class CalcRequiredMonthlySavings:
         """
         monthly_savings_percent_two = self.monthly_savings_percent_two / 100 / 12
         periods = self.target_years_to_freedom * 12
-        monthly_savings_required = (self.target_goal_two / ((1+ self.annual_interest_two / 12) ** periods - 1)) / self.monthly_savings_percent_two
+        monthly_savings_required = (self.target_goal_two / ((1+ self.annual_interest_two / 12) ** periods - 1)) / monthly_savings_percent_two)
 
         return monthly_savings_required
