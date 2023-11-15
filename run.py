@@ -28,6 +28,7 @@ def user_data():
     print('This program will calculate the number of years it takes'
           'to reach finanicial freedom, or how much you need to save'
           'each month to reach the finanicial freedom in a certain years.\n')
+    return name
 
 def choose_what_to_calc():
     """
@@ -61,15 +62,13 @@ def choose_what_to_calc():
         choose_what_to_calc()
 
 
-user_data()
+user_name = user_data()
 calculation_choice = choose_what_to_calc()
 
 if isinstance(calculation_choice, CalcYearsToFinancialFreedom):
     result = calculation_choice.calc_years_to_financial_freedom()
-    print(f'{name}, it will take {result} years to reach the finanicial freedom.\n')
+    print(f'{user_name}, it will take {result} years to reach the finanicial freedom.\n')
 
 elif isinstance(calculation_choice, CalcRequiredMonthlySavings):
     result = calculation_choice.calc_required_monthly_savings()
-    print(f'{name}, you will need to save {result:.2f} euros every month to reach your financial goal.\n')
-          
-    
+    print(f'{user_name}, you will need to save {result:.2f} euros every month to reach your financial goal.\n')
