@@ -66,6 +66,9 @@ def choose_what_to_calc():
         choose_what_to_calc()
 
 def run_calc():
+    """
+    Make the user select if they want to make another claculation or if they want to exit.
+    """
     user_name = user_data()
     
     while True:
