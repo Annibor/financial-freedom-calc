@@ -1,23 +1,9 @@
 """
 Import needed for the code
 """
-import gspread
-from google.oauth2.service_account import Credentials
 from calculations import check_if_exit
 from calculations import CalcYearsToFinancialFreedom
 from calculations import CalcRequiredMonthlySavings
-
-
-SCOPE = [
-    "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/drive.file",
-    "https://www.googleapis.com/auth/drive"
-    ]
-
-CREDS = Credentials.from_service_account_file('creds.json')
-SCOPED_CREDS = CREDS.with_scopes(SCOPE)
-GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-SHEET = GSPREAD_CLIENT.open('financial-freedom-calc')
 
 
 def user_data():
@@ -33,6 +19,7 @@ def user_data():
           'to reach finanicial freedom, or how much you need to save'
           'each month to reach the finanicial freedom in a certain years.\n')
     return name
+
 
 def choose_what_to_calc():
     """
@@ -63,12 +50,13 @@ def choose_what_to_calc():
         print('Invalid choice. Please try again.\n')
         choose_what_to_calc()
 
+
 def run_calc():
     """
     Make the user select if they want to make another claculation or if they want to exit.
     """
     user_name = user_data()
-    
+
     while True:
         calculation_choice = choose_what_to_calc()
 
@@ -87,7 +75,5 @@ def run_calc():
             print(f'Thank you {user_name}, for using the Financial Freedom Calculator. See you next time! \n')
             break
 
+
 run_calc()
-
-
-
