@@ -1,6 +1,8 @@
 """
 Calculations for the Financial Freedom Calculator.
 """
+
+
 def check_if_exit(input_value):
     """
     Check if the input value is 'exit' and exit the calculator if true.
@@ -22,7 +24,6 @@ class CalcYearsToFinancialFreedom:
         except ValueError as exc:
             raise ValueError('Invalid input. Answers must be numeric values. Please try again.\n') from exc
 
-
     def calc_years_to_financial_freedom(self):
         """
         Calculates the years it takes to reach the finanicial freedom.
@@ -30,11 +31,10 @@ class CalcYearsToFinancialFreedom:
         """
         if self.monthly_savings >= self.financial_goal:
             return 0
-        
-        years_to_target = (self.financial_goal -self.initial_savings) / self.monthly_savings
+
+        years_to_target = (self.financial_goal - self.initial_savings) / self.monthly_savings
 
         return years_to_target
-
 
 
 class CalcRequiredMonthlySavings:
