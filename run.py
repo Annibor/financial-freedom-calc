@@ -3,6 +3,7 @@ Import needed for the code
 """
 import gspread
 from google.oauth2.service_account import Credentials
+from calculations import check_if_exit
 from calculations import CalcYearsToFinancialFreedom
 from calculations import CalcRequiredMonthlySavings
 
@@ -26,6 +27,8 @@ def user_data():
     print('Welcome to the financial freedom calculator!\n')
     name = input('Please enter your name: \n')
     print(f'Hello {name}!\n')
+    check_if_exit(name)
+
     print('This program will calculate the number of years it takes'
           'to reach finanicial freedom, or how much you need to save'
           'each month to reach the finanicial freedom in a certain years.\n')
@@ -40,7 +43,8 @@ def choose_what_to_calc():
     print('2. How much you need to save each month to reach the finanicial'
           'freedom in a certain years\n')
     choice = input('Enter your choice: \n')
-    
+    check_if_exit()
+
     if choice == '1':
         initial_savings = float(input('Please enter your initial savings in euro: \n'))
         monthly_savings = float(input('Please enter your monthly savings in euro: \n'))
