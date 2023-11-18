@@ -43,7 +43,7 @@ def choose_what_to_calc():
     print('2. How much you need to save each month to reach the finanicial'
           'freedom in a certain years\n')
     choice = input('Enter your choice: \n')
-    check_if_exit()
+    check_if_exit(choice)
 
     if choice == '1':
         initial_savings = float(input('Please enter your initial savings in euro: \n'))
@@ -65,15 +65,28 @@ def choose_what_to_calc():
         print('Invalid choice. Please try again.\n')
         choose_what_to_calc()
 
-user_name = user_data()
-calculation_choice = choose_what_to_calc()
+def run_calc():
+    user_name = user_data()
+    
+    while True:
+        calculation_choice = choose_what_to_calc()
 
-if isinstance(calculation_choice, CalcYearsToFinancialFreedom):
-    result = calculation_choice.calc_years_to_financial_freedom()
-    print(f'{user_name}, it will take {result} years to reach the finanicial freedom.\n')
+        if isinstance(calculation_choice, CalcYearsToFinancialFreedom):
+            result = calculation_choice.calc_years_to_financial_freedom()
+            print(f'{user_name}, it will take {result} years to reach the finanicial freedom.\n')
 
-elif isinstance(calculation_choice, CalcRequiredMonthlySavings):
-    result = calculation_choice.calc_required_monthly_savings()
-    print(f'{user_name}, you will need to save {result:.2f} euros every month to reach your financial goal.\n')
+        elif isinstance(calculation_choice, CalcRequiredMonthlySavings):
+            result = calculation_choice.calc_required_monthly_savings()
+            print(f'{user_name}, you will need to save {result:.2f} euros every month to reach your financial goal.\n')
+
+        repeat = input('Do you want to make a new calculation? (yes/no): ').lower()
+        check_if_exit(repeat)
+
+        if repeat != 'yes':
+            print(f'Thank you {user_name}, for using the Financial Freedom Calculator. See you next time! \n')
+            break
+
+run_calc()
+
 
 
