@@ -49,9 +49,7 @@ def choose_what_to_calc():
         initial_savings = float(input('Please enter your initial savings in euro: \n'))
         monthly_savings = float(input('Please enter your monthly savings in euro: \n'))
         financial_goal = float(input('Please enter your financial goal in euro: \n'))
-        annual_interest = float(input('Please enter your annual interest rate: \n'))
-        monthly_savings_percent = float(input('Please enter your monthly savings percentage: \n'))
-        years_to_financial_freedom = CalcYearsToFinancialFreedom(initial_savings, monthly_savings, financial_goal, annual_interest, monthly_savings_percent)
+        years_to_financial_freedom = CalcYearsToFinancialFreedom(initial_savings, monthly_savings, financial_goal)
 
         return years_to_financial_freedom
     elif choice == '2':
