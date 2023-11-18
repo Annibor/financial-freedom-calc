@@ -47,7 +47,7 @@ class CalcRequiredMonthlySavings:
             self.target_goal_two = float(target_goal_two)
             self.target_years_to_freedom = float(target_years_to_freedom)
         except ValueError as exc:
-            raise ValueError('Invalid input.Answers must be numeric values. Please try again.\n') from exc
+            raise ValueError('Invalid input. Answers must be numeric values. Please try again.\n') from exc
 
     def calc_required_monthly_savings(self):
         """
