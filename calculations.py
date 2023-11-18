@@ -1,6 +1,15 @@
 """
-Calclulations for the financial freedom Calculator.
+Calclulations for the financial freedom Calculator adn function for exition the calculator.
 """
+def check_if_exit(input_value):
+    """
+    Check if the input value is 'exit' and exit the calculator if true.
+    """
+    if input_value == 'exit':
+        print('Exiting calculator, see you next time!')
+        exit()
+
+
 class CalcYearsToFinancialFreedom:
     """
     Calculates the number of years it takes to reach the finanicial freedom.
