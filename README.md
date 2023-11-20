@@ -18,8 +18,6 @@ Welcome to Financial Freedom Calculator! This is a python program designed to as
   - [**Table of Content**](#table-of-content)
   - [**Planning & development**](#planning--developmnet)
     - [**Project Goals**](#project-goals)
-    - [**Wireframes**](#wireframes)
-      - [**Home Page**](#home-page)
     - [**Future Features**](#future-features)
   - [**Testing**](#testing)
   - [**Devtools**](#devtools)
@@ -77,7 +75,7 @@ Welcome to Financial Freedom Calculator! This is a python program designed to as
 
 ### Future Features
 
-Future features for the webpage are:
+Future features for the CLI are:
 
 
 
@@ -85,26 +83,6 @@ Future features for the webpage are:
 
 - Throughout the whole development of the webpage, I've made tests in:
 
-### DevTools
-
-- Troughout the development I've used Devtools to inspect and test the website to be able to make the best I could for it.
-
-### Lighthouse
-
-#### Issues
-
-- 
-- ![]()
-
-- 
-
-- ![]()
-
-#### Results
-
-- JSHint test for Javascript code.
-
-- ![]()
 
 ### Manual testing
 
