@@ -65,7 +65,7 @@ Welcome to Financial Freedom Calculator! This is a python program designed to as
 - **Required Monthly Savings Calculation**:
   - Input initial savings, target financial goals and the desired time frame. 
   - The calculator will determine the monthly savings needed to reach the users financial goal.
-  
+
 
 ### Future Features
 
@@ -123,17 +123,8 @@ My link is: []()
 - I've used Visual Studio Code to write the code.
 - I've used Git to load and push my code to Github and for version control.
 - I've used GitHub for repository management.
-- I've used Code Pen to test and change my code, without ruining the actual project.
-- I've used preinstalled app called "Prevew" to edit the sizes of the photos.
-- I've used Coolors.co to find a color palette for the website.
-- I've also used Coolors.co to contrast check text colors and background colors.
-- I've used maketintsandshades.com to find evetuals tints and shadow colors as a complement for the color palette.
-- I've used Balsamiq when I made the wireframes for the website.
-- I've used cssgradient.io to make the background gradient.
 - I've used Chat GPT and google translate for some translations and questions.
-
-## Media
-
+- I've used CI Python Linter for testing the python code.
 
 ## Usage
 
@@ -160,9 +151,8 @@ My link is: []()
 ### Content
 
 - This README is based upon two sourses for guidance: one by Davis Calikes, available at [GitHub](https://github.com/davidcalikes/portfolio-project-one#readme), and another authored by me, available at [GitHub](https://github.com/Annibor/EarthEcho-Studios/blob/main/README.md)
-- 
-- 
 - Usage, Modification, Distrubition, Private Use and Liability Content: The guidelines pertaining to usage, modification, distribution, private use, and liability are directly derived from my project, accessible at [GitHub](https://github.com/Annibor/EarthEcho-Studios/blob/main/README.md)
+- This project is based upon two sources for guidance: one by ismailmoufid47, available at [GitHub](https://github.com/ismailmoufid47/financial_calculator/blob/main/calculations/calculations.py) and one by Akash3121, available at [GitHub](https://github.com/tuomaskivioja/5-super-quick-automation-ideas/blob/main/wealth_calculator.py).
 
 ### Special Thanks
 
