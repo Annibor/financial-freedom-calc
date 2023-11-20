@@ -68,18 +68,30 @@ def run_calc():
 
         if isinstance(calculation_choice, CalcYearsToFinancialFreedom):
             result = calculation_choice.calc_years_to_financial_freedom()
-            print(f'{user_name}, it will take {result} years to reach the finanicial freedom.\n')
+            print(f'{user_name}, it will take {result} years '
+                  'to reach the finanicial freedom.\n')
 
         elif isinstance(calculation_choice, CalcRequiredMonthlySavings):
             result = calculation_choice.calc_required_monthly_savings()
-            print(f'{user_name}, you will need to save {result:.2f} euros every month to reach your financial goal.\n')
+            print(f'{user_name}, you will need to save {result:.2f} euros '
+                  'every month to reach your financial goal.\n')
 
         repeat = input('Do you want to make a new calculation? (yes/no): ').lower()
         check_if_exit(repeat)
 
         if repeat != 'yes':
-            print(f'Thank you {user_name}, for using the Financial Freedom Calculator. See you next time! \n')
+            print(f'Thank you {user_name}, for using the Financial Freedom Calculator.'
+                  'See you next time! \n')
             break
 
 
-run_calc()
+def main():
+    """
+    Main function that calls the run_calc function
+    that will make the calculation available for the user.
+    """
+    run_calc()
+
+
+if __name__ == '__main__':
+    main()
