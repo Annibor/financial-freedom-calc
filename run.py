@@ -33,19 +33,25 @@ def choose_what_to_calc():
     check_if_exit(choice)
 
     if choice == '1':
-        initial_savings = float(input('Please enter your initial savings in euro: \n'))
-        monthly_savings = float(input('Please enter your monthly savings in euro: \n'))
-        financial_goal = float(input('Please enter your financial goal in euro: \n'))
-        years_to_financial_freedom = CalcYearsToFinancialFreedom(initial_savings, monthly_savings, financial_goal)
-
-        return years_to_financial_freedom
+        try:
+            initial_savings = float(input('Please enter your initial savings in euro: \n'))
+            monthly_savings = float(input('Please enter your monthly savings in euro: \n'))
+            financial_goal = float(input('Please enter your financial goal in euro: \n'))
+            years_to_financial_freedom = CalcYearsToFinancialFreedom(initial_savings, monthly_savings, financial_goal)
+            return years_to_financial_freedom
+        except ValueError:
+            print('Invalid input. Answers must be numeric values. Please try again.\n')
+            return choose_what_to_calc()
     elif choice == '2':
-        initial_savings_two = float(input('Please enter your initial savings in euro: \n'))
-        target_goal_two = float(input('Please enter your target goal in euro: \n'))
-        taget_years_to_freedom = float(input('Please enter your taget years to freedom: \n'))
-        required_monthly_savings = CalcRequiredMonthlySavings(initial_savings_two, target_goal_two, taget_years_to_freedom)
-
-        return required_monthly_savings
+        try:
+            initial_savings_two = float(input('Please enter your initial savings in euro: \n'))
+            target_goal_two = float(input('Please enter your target goal in euro: \n'))
+            taget_years_to_freedom = float(input('Please enter your taget years to freedom: \n'))
+            required_monthly_savings = CalcRequiredMonthlySavings(initial_savings_two, target_goal_two, taget_years_to_freedom)
+            return required_monthly_savings
+        except ValueError:
+            print('Invalid input. Answers must be numeric values. Please try again.\n')
+            return choose_what_to_calc()
     else:
         print('Invalid choice. Please try again.\n')
         choose_what_to_calc()
