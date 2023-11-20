@@ -66,6 +66,14 @@ Welcome to Financial Freedom Calculator! This is a python program designed to as
   - Input initial savings, target financial goals and the desired time frame. 
   - The calculator will determine the monthly savings needed to reach the users financial goal.
 
+- **Exit**: 
+  -The calculator will exit the program if user enters 'exit' in any of the inputs within the calculator. 
+
+- **Option to rerun a calculation**: 
+  - When a calculation is done, the calculator will ask the user if it would like to make another calculation. 
+     - If yes, the user will make a new choise of what calculation it want to do. 
+     - If no, the calculator will exit the program and thank the user for useing the calculator. 
+
 
 ### Future Features
 
