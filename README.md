@@ -93,7 +93,62 @@ Future features for the CLI are:
 
 ### Manual testing
 
-I tested the website manualy throughout the whole developing progress. The website is tested in Safari, Google Chrome and Brave. The website is also tested from an Iphone.
+<table>
+ <thead>
+   <tr>
+     <th>Testing Description</th>
+     <th>Expected Action</th>
+     <th>Actual Output</th>
+     <th>Result</th>
+
+   </tr>
+ </thead>
+  <tbody>
+   <tr>
+     <td>Start menu loads</td>
+     <td>User is presentend with welcome text and input for entering name.</td>
+     <td>User is presentend with welcome text and input for entering name.</td>
+     <td>Confirmed</td>
+   </tr>
+   <tr>
+     <td>Enters name</td>
+     <td>User enters name and get Hello message followed by description of the calctulator</td>
+     <td>User enters name and get Hello message followed by description of the calctulator</td>
+     <td>Confirmed</td>
+   </tr>
+   <tr>
+     <td>Information and choises are showed</td>
+     <td>User is presented with information about the calculations and presented with a choice</td>
+     <td>Information about the calculations are showed and user is presented with a choice</td>
+     <td>Confirmed</td>
+   </tr>
+   <tr>
+     <td>Enters a choice</td>
+     <td>User inputs 1 and calculation 1 starts.</td>
+     <td>When user inputs 1 the claculation 1 starts.</td>
+     <td>Confirmed</td>
+   </tr>
+    <tr>
+     <td>Calc. 1 inputs</td>
+     <td>User inputs digits and the calculation runs until end.</td>
+     <td>The caclulations runs until end when user inputs digits.</td>
+     <td>Confirmed</td>
+   </tr>
+   <tr>
+     <td>Calc. 1 inputs</td>
+     <td>User inputs letters or others. User get error message.</td>
+     <td>Error message shown when user inputs anything but digits.</td>
+     <td>Confirmed</td>
+   </tr>
+    <tr>
+     <td>Calc. 1 when error - restart</td>
+     <td>Calulation restarts if user inputs anything but digits.</td>
+     <td>Restart for user to rechoose whtat calculation to do.</td>
+     <td>Confirmed</td>
+   </tr>
+
+  </tbody>
+</table>
 
 ## Deployment
 
