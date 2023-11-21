@@ -193,6 +193,12 @@ Future features for the CLI are:
      <td>The program ends with a thank you message when user inputs "no".</td>
      <td>Confirmed</td>
    </tr>
+   <tr>
+     <td>Exit the program</td>
+     <td>If typing exit in any input, the program will end.</td>
+     <td>When input exit, the program will end with a thank you message.</td>
+     <td>Confirmed</td>
+   </tr>
   </tbody>
 </table>
 
