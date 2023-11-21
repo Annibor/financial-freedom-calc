@@ -136,17 +136,63 @@ Future features for the CLI are:
    </tr>
    <tr>
      <td>Calc. 1 inputs</td>
-     <td>User inputs letters or others. User get error message.</td>
+     <td>User inputs anything else than digits. User get error message.</td>
      <td>Error message shown when user inputs anything but digits.</td>
      <td>Confirmed</td>
    </tr>
-    <tr>
+   <tr>
      <td>Calc. 1 when error - restart</td>
      <td>Calulation restarts if user inputs anything but digits.</td>
      <td>Restart for user to rechoose whtat calculation to do.</td>
      <td>Confirmed</td>
    </tr>
-
+   <tr>
+     <td>Calc. 2 inputs</td>
+     <td>User inputs digits and the calculation runs until end.</td>
+     <td>The caclulations runs until end when user inputs digits.</td>
+     <td>Confirmed</td>
+   </tr>
+   <td>Calc. 2 inputs</td>
+     <td>User inputs anything else than digits. User get error message.</td>
+     <td>Error message shown when user inputs anything but digits.</td>
+     <td>Confirmed</td>
+   </tr>
+    <tr>
+     <td>Calc. 2 when error - restart</td>
+     <td>Calulation restarts if user inputs anything but digits.</td>
+     <td>Restart for user to rechoose whtat calculation to do.</td>
+     <td>Confirmed</td>
+   </tr>
+   <tr>
+     <td>Option to make another calculation</td>
+     <td>When calculation is done, user will get option to make another calculation or not.</td>
+     <td>Option to restart calculation when calculation is done.</td>
+     <td>Confirmed</td>
+   </tr>
+    <tr>
+     <td>Calc. 1 When user choose to make a new calculation</td>
+     <td>If user inputs "yes", the option to choose what calculation to make appears.</td>
+     <td>The program where the user choose what calculation do appears when typing "yes".</td>
+     <td>Confirmed</td>
+   </tr>
+    <tr>
+     <td>Calc. 2 When user choose to make a new calculation</td>
+     <td>If user inputs "yes", the option to choose what calculation to make appears.</td>
+     <td>The program where the user choose what calculation do appears when typing "yes".</td>
+     <td>Confirmed</td>
+   </tr>
+    <tr>
+     <td>Calc. 1 When user choose not to make another calculation</td>
+     <td>If user inputs "no", the user gets a thank you message and the progam will end.</td>
+     <td>The program ends with a thank you message when user inputs "no".</td>
+     <td>Confirmed</td>
+   </tr>
+    <tr>
+     <td>Calc. 2 When user choose not to make another calculation</td>
+     <td>If user inputs "no", the user gets a thank you message and the progam will end.</td>
+     <td>The program ends with a thank you message when user inputs "no".</td>
+     <td>Confirmed</td>
+   </tr>
   </tbody>
 </table>
 
