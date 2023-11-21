@@ -79,6 +79,10 @@ The primary goals for the Financial Freedom Calculator are to:
 ### Future Features
 
 Future features for the CLI are:
+- Additional financial planning tools.
+- Make calculations work if user wants to input yearly or monthly interest rates.
+- Making it possible for user to save and send the calculations to their emails.
+- Making a calculation that includes the aculat spenings for the user each month. 
 
 
 
