@@ -92,7 +92,7 @@ def run_calc():
             # for the user, and the name the user added in
             # the beginning of the program will be shown.
             result = calculation_choice.calc_years_to_financial_freedom()
-            print(f'{user_name}, it will take {result} years '
+            print(f'{user_name}, it will take {result:.2f} years '
                   'to reach the finanicial freedom.\n')
 
         elif isinstance(calculation_choice, CalcRequiredMonthlySavings):
