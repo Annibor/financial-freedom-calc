@@ -36,22 +36,25 @@ Welcome to Financial Freedom Calculator! This is a python program designed to as
 
 ## Planning & developmnet
 
-- 
 
 ### Project Goals
 
-
+The primary goals for the Financial Freedom Calculator are to:
+- Provide users with a tool to calculate the number of years required to achive financial freedom.
+- Assist the user in determining the monthly savings needed to reach financial freedom within a certain period of time.
 
 ### User-Centered Approach
 
 
 #### As a General user
 
-- 
+- Recive clear instructions for using the calculator.
+- Easily understand the pourpose and benefits of the calculator.
 
 #### As a New User
 
-- 
+- Understand the outcomes of calculations.
+- Recive infomation about each step in the calculation.
 
 ### Features
 
