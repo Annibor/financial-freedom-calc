@@ -21,6 +21,11 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('financial-freedom-calc')
 
+def update_financial_worksheet():
+    """Update the financial work sheet. Add new
+    information to the worksheet from user input.
+    """
+    
 
 def user_data():
     """
@@ -31,8 +36,12 @@ def user_data():
     """
     print('Welcome to the financial freedom calculator!\n')
     name = input('Please enter your name: \n')
-    print(f'Hello {name}!\n')
     check_if_exit(name)
+    email = input('Please enter your email address: \n')
+    check_if_exit(email)
+    age = input('Please enter your age: \n')
+    check_if_exit(age)
+    print(f'Hello {name}!\n')
 
     # This gives user a introduction to the calculator.
     print('This program will calculate the number of years it takes'
