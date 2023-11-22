@@ -1,3 +1,6 @@
+#This code is based on two different sources:
+# one by ismailmoufid47, available at GitHu(link in README.md )
+# and one by Akash3121, available at GitHub (link in README.md).
 """
 Import needed for the code
 """
@@ -33,10 +36,12 @@ def choose_what_to_calc():
         Object: Instance of either CalcYearsTiFinancialFreedom
         or CalcRequiredMothlySavings.
     """
-    print('Please choose what you want to calculate:\n')
-    print('1. How many years it takes to reach the finanicial freedom\n')
-    print('2. How much you need to save each month to reach the finanicial'
-          'freedom in a certain years\n')
+    print("""
+Please choose what you want to calculate:\n
+1. How many years it takes to reach the finanicial freedom\n
+2. How much you need to save each month to reach the finanicial
+freedom in a certain years\n
+    """)
     choice = input('Enter your choice: \n')
     check_if_exit(choice)
 
@@ -112,9 +117,9 @@ def run_calc():
         check_if_exit(repeat)
 
         if repeat != 'yes':
-            print(f'Thank you {user_name}, for using'
-                  'the Financial Freedom Calculator.'
-                  'See you next time! \n')
+            print(f"""Thank you {user_name}, for using
+the Financial Freedom Calculator.
+See you next time! \n""")
             break
 
 

@@ -260,10 +260,10 @@ I would like to express my gratitude to the following individuals who have made 
 
 - **Michel**: My wonderful boyfriend, whose unwavering support and encouragement have been my constant motivation.
 
-- **A**: 
+- ****: 
 
 ## What I've Learned
 
 During the development of this project, I've gained valuable insights and skills that have enriched my coding journey. Here are some of the key takeaways:
 
-- **L**: 
+- ****: 
