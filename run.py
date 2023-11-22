@@ -22,12 +22,20 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('financial-freedom-calc')
 
 def update_user_worksheet(user_data_list):
-    """Update the financial work sheet. Add new
+    """Update the user worksheet. Add new
     information to the worksheet from user input.
     """
     print('Update the user worksheet...\n')
     user_worksheet = SHEET.worksheet('user_sheet')
     user_worksheet.append_row(user_data_list)
+
+def update_financial_worksheet():
+     """Update the financial worksheet. Add new
+    information to the worksheet from user input.
+    """
+    print('Update the financial worksheet...\n')
+    financail_worksheet = SHEET.worksheet('financial_sheet')
+    finanacial_worksheet.append_row(financial_data_list)
 
 def user_data():
     """
