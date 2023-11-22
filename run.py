@@ -53,6 +53,7 @@ def choose_what_to_calc():
                 initial_savings, monthly_savings, financial_goal))
             return years_to_financial_freedom
         except ValueError:
+            # Shows error message if user enters anything else than digits.
             print('Invalid input. Answers must be numeric values.'
                   'Please try again.\n')
             return choose_what_to_calc()
@@ -69,6 +70,7 @@ def choose_what_to_calc():
                 initial_savings_two, target_goal_two, taget_years_to_freedom))
             return required_monthly_savings
         except ValueError:
+            # Shows error message if user enters anything else than digits.
             print('Invalid input. Answers must be numeric values.'
                   'Please try again.\n')
             return choose_what_to_calc()
