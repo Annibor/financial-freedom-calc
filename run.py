@@ -28,18 +28,22 @@ def update_user_worksheet(user_data_list):
     print('Update the user worksheet...\n')
     user_worksheet = SHEET.worksheet('user_sheet')
     user_worksheet.append_row(user_data_list)
+    print('User worksheet updated')
 
-def update_financial_worksheet():
-     """Update the financial worksheet. Add new
+def update_financial_worksheet(financial_data_list):
+    """
+    Update the financial worksheet. Add new
     information to the worksheet from user input.
     """
     print('Update the financial worksheet...\n')
-    financail_worksheet = SHEET.worksheet('financial_sheet')
-    finanacial_worksheet.append_row(financial_data_list)
+    financial_worksheet = SHEET.worksheet('financial_sheet')
+    financial_worksheet.append_row(financial_data_list)
+    print('Financial worksheet updated')
 
 def user_data():
     """
     Get user data and welcome to the program.
+    And update the google worksheet with user data.
 
     Returns:
          str: User's name.
@@ -91,6 +95,9 @@ freedom in a certain years\n
                 'Please enter your financial goal in euro: \n')))
             years_to_financial_freedom = (CalcYearsToFinancialFreedom(
                 initial_savings, monthly_savings, financial_goal))
+            financial_data_list = [initial_savings, monthly_savings, financial_goal]
+            update_financial_worksheet(financial_data_list)
+
             return years_to_financial_freedom
         except ValueError:
             # Shows error message if user enters anything else than digits.
