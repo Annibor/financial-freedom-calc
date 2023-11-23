@@ -50,7 +50,7 @@ def update_financial_worksheet_two(financial_data_list_two):
     financial_worksheet.append_row(financial_data_list_two)
     print('Financial worksheet updated')
 
-def update_answer_calculations(answers_data_list):
+def update_answers_calculations(answers_data_list):
     """
     Update the answers whorksheet. Add new
     information to the worksheet from claculations made form the users inputs.
@@ -135,7 +135,7 @@ freedom in a certain years\n
                 'Please enter your taget years to freedom: \n')))
             required_monthly_savings = (CalcRequiredMonthlySavings(
                 initial_savings_two, target_goal_two, target_years_to_freedom))
-            financial_data_list_two = [initial_savings_two, target_goal_two, target_years_to_freedom]
+            financial_data_list_two = [initial_savings_two,target_goal_two, target_years_to_freedom]
             update_financial_worksheet_two(financial_data_list_two)
             return required_monthly_savings
         except ValueError:
