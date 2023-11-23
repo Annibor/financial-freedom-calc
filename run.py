@@ -30,14 +30,14 @@ def update_user_worksheet(user_data_list):
     user_worksheet.append_row(user_data_list)
     print('User worksheet updated')
 
-def update_financial_worksheet(financial_data_list):
+def update_financial_worksheet(financial_data_list_one):
     """
     Update the financial worksheet. Add new
     information to the worksheet from user input.
     """
     print('Update the financial worksheet...\n')
-    financial_worksheet = SHEET.worksheet('financial_sheet')
-    financial_worksheet.append_row(financial_data_list)
+    financial_worksheet = SHEET.worksheet('financial_sheet_one')
+    financial_worksheet.append_row(financial_data_list_one)
     print('Financial worksheet updated')
 
 def user_data():
@@ -96,7 +96,7 @@ freedom in a certain years\n
             years_to_financial_freedom = (CalcYearsToFinancialFreedom(
                 initial_savings, monthly_savings, financial_goal))
             financial_data_list = [initial_savings, monthly_savings, financial_goal]
-            update_financial_worksheet(financial_data_list)
+            update_financial_worksheet(financial_data_list_one)
 
             return years_to_financial_freedom
         except ValueError:
