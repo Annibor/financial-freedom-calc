@@ -30,14 +30,24 @@ def update_user_worksheet(user_data_list):
     user_worksheet.append_row(user_data_list)
     print('User worksheet updated')
 
-def update_financial_worksheet(financial_data_list_one):
+def update_financial_worksheet_one(financial_data_list_one):
     """
-    Update the financial worksheet. Add new
-    information to the worksheet from user input.
+    Update the financial worksheet one. Add new
+    information to the worksheet from user inputs in choice one.
     """
     print('Update the financial worksheet...\n')
     financial_worksheet = SHEET.worksheet('financial_sheet_one')
     financial_worksheet.append_row(financial_data_list_one)
+    print('Financial worksheet updated')
+
+def update_financial_worksheet_two(financial_data_list_two):
+    """
+    Update the financial worksheet two. Add new
+    information to the worksheet from user inputs in choice two.
+    """
+    print('Update the financial worksheet...\n')
+    financial_worksheet = SHEET.worksheet('financial_sheet_two')
+    financial_worksheet.append_row(financial_data_list_two)
     print('Financial worksheet updated')
 
 def user_data():
@@ -95,8 +105,8 @@ freedom in a certain years\n
                 'Please enter your financial goal in euro: \n')))
             years_to_financial_freedom = (CalcYearsToFinancialFreedom(
                 initial_savings, monthly_savings, financial_goal))
-            financial_data_list = [initial_savings, monthly_savings, financial_goal]
-            update_financial_worksheet(financial_data_list_one)
+            financial_data_list_one = [initial_savings, monthly_savings, financial_goal]
+            update_financial_worksheet_one(financial_data_list_one)
 
             return years_to_financial_freedom
         except ValueError:
@@ -111,10 +121,12 @@ freedom in a certain years\n
                 'Please enter your initial savings in euro: \n')))
             target_goal_two = (float(input(
                 'Please enter your target goal in euro: \n')))
-            taget_years_to_freedom = (float(input(
+            target_years_to_freedom = (float(input(
                 'Please enter your taget years to freedom: \n')))
             required_monthly_savings = (CalcRequiredMonthlySavings(
-                initial_savings_two, target_goal_two, taget_years_to_freedom))
+                initial_savings_two, target_goal_two, target_years_to_freedom))
+            financial_data_list_two = [initial_savings_two, target_goal_two, target_years_to_freedom]
+            update_financial_worksheet_two(financial_data_list_two)
             return required_monthly_savings
         except ValueError:
             # Shows error message if user enters anything else than digits.
