@@ -50,6 +50,16 @@ def update_financial_worksheet_two(financial_data_list_two):
     financial_worksheet.append_row(financial_data_list_two)
     print('Financial worksheet updated')
 
+def update_answer_calculations(answers_data_list):
+    """
+    Update the answers whorksheet. Add new
+    information to the worksheet from claculations made form the users inputs.
+    """
+    print('Update the answers worksheet...\n')
+    financial_worksheet = SHEET.worksheet('Answer_calculations')
+    financial_worksheet.append_row(answers_data_list)
+    print('Answers worksheet updated')
+
 def user_data():
     """
     Get user data and welcome to the program.
