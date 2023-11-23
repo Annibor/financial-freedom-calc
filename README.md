@@ -253,6 +253,8 @@ My link is: []()
 - This README is based upon two sourses for guidance: one by Davis Calikes, available at [GitHub](https://github.com/davidcalikes/portfolio-project-one#readme), and another authored by me, available at [GitHub](https://github.com/Annibor/EarthEcho-Studios/blob/main/README.md)
 - Usage, Modification, Distrubition, Private Use and Liability Content: The guidelines pertaining to usage, modification, distribution, private use, and liability are directly derived from my project, accessible at [GitHub](https://github.com/Annibor/EarthEcho-Studios/blob/main/README.md)
 - This project is based upon two sources for guidance: one by ismailmoufid47, available at [GitHub](https://github.com/ismailmoufid47/financial_calculator/blob/main/calculations/calculations.py) and one by Akash3121, available at [GitHub](https://github.com/tuomaskivioja/5-super-quick-automation-ideas/blob/main/wealth_calculator.py).
+- The code for importing googlesheets, like SCOPE and Credentials are adapted from Code Institues [GitHub](https://github.com/Code-Institute-Solutions/love-sandwiches-p5-sourcecode).
+The functions for adding data from the user to the gogglesheets are based on the [GitHub](https://github.com/Code-Institute-Solutions/love-sandwiches-p5-sourcecode)by Code Institute.
 
 ### Special Thanks
 
