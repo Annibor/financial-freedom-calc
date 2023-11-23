@@ -1,3 +1,6 @@
+#This code is based on two different sources:
+# one by ismailmoufid47, available at GitHu(link in README.md )
+# and one by Akash3121, available at GitHub (link in README.md).
 """
 Calculations for the Financial Freedom Calculator.
 """

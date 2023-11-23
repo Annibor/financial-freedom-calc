@@ -1,22 +1,26 @@
 """
 Making googlesheet update with inputs information from the user, and the results from calculations
 """
-#The imports are adapted form Love Sandwiches, by Code institute. Link in README.md
+#The imports are adapted form Love Sandwiches
+# by Code institute. Link in README.md
 import gspread
 from google.oauth2.service_account import Credentials
-#The scope is adapted form Love Sandwiches, by Code institute. Link in README.md
+#The scope is adapted form Love Sandwiches
+# by Code institute. Link in README.md
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
     "https://www.googleapis.com/auth/drive"
     ]
-#The creds, scoped creds, gspread clients and sheets are adapted form Love Sandwiches, by Code institute. Link in README.md
+#The creds, scoped creds, gspread clients and sheets are
+# adapted form Love Sandwiches, by Code institute. Link in README.md
 CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('financial-freedom-calc')
 
-# All the following codes are based on Code Institutes Love Sandwiches. Link in README.md
+# All the following codes are based on
+# Code Institutes Love Sandwiches. Link in README.md
 def update_user_worksheet(user_data_list):
     """Update the user worksheet. Add new
     information to the worksheet from user input.
