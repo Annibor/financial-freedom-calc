@@ -28,7 +28,7 @@ class CalcYearsToFinancialFreedom:
         if self.monthly_savings >= self.financial_goal:
             return 0
 
-        years_to_target = (self.financial_goal - self.initial_savings) / self.monthly_savings
+        years_to_target = (self.financial_goal - self.initial_savings) / (self.monthly_savings * 12)
 
         return years_to_target
 
