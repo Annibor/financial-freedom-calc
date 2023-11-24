@@ -1,11 +1,6 @@
-#This code is based on two different sources:
-# one by ismailmoufid47, available at GitHu(link in README.md )
-# and one by Akash3121, available at GitHub (link in README.md).
 """
 Calculations for the Financial Freedom Calculator.
 """
-# Imports needed for the calculations
-from run import update_answers_calculations
 
 def check_if_exit(input_value):
     """
@@ -34,8 +29,6 @@ class CalcYearsToFinancialFreedom:
             return 0
 
         years_to_target = (self.financial_goal - self.initial_savings) / self.monthly_savings
-        answers_data_list = [years_to_target]
-        update_answers_calculations(answers_data_list)
 
         return years_to_target
 
@@ -56,7 +49,6 @@ class CalcRequiredMonthlySavings:
         """
         periods = self.target_years_to_freedom * 12
         monthly_savings_required = (self.target_goal_two - self.initial_savings_two) / periods
-        answers_data_list = [monthly_savings_required]
-        update_answers_calculations(answers_data_list)
+
 
         return monthly_savings_required
