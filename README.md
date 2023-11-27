@@ -112,8 +112,26 @@ Future features for the CLI are:
    </tr>
    <tr>
      <td>Enters name</td>
-     <td>User enters name and get Hello message followed by description of the calctulator</td>
-     <td>User enters name and get Hello message followed by description of the calctulator</td>
+     <td>User enters name and get followed by message of entering email address.</td>
+     <td>User enters name and get followed by message of entering email address.</td>
+     <td>Confirmed</td>
+   </tr>
+   <tr>
+     <td>Enters email address</td>
+     <td>User enters email address and get followed by message of entering age if email is valid.</td>
+     <td>User enters email address and get followed by message of entering age if email is valid.</td>
+     <td>Confirmed</td>
+   </tr>
+   <tr>
+     <td>Invalid email address</td>
+     <td>User enters invalid email address and get followed by message of Invalid email address. Please enter valid email.</td>
+     <td>User enters invalid email address and get message of Invalid email address. Please enter valid email.</td>
+     <td>Confirmed</td>
+   </tr>
+   <tr>
+     <td>Enters age</td>
+     <td>User enters age and get followed by welcome message and introduction for the calculation.</td>
+     <td>User enters name and get followed by welcome message and introduction for the calculation.</td>
      <td>Confirmed</td>
    </tr>
    <tr>
