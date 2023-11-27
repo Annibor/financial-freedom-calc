@@ -227,21 +227,23 @@ Future features for the CLI are:
 </table>
 
 ### CI Python Linter
-- I have made test in the CI Python Linter throughout the whole developing process. The images show that the code in both run.py and calculations.py files are clear from errors.
+- I have made tests in the CI Python Linter throughout the whole developing process. The images show that the code in both run.py and calculations.py files are clear from errors.
 - [CI Python Linter run.py](./docs/testing/python_linter_run_py.png)
 - [CI Python Linter calculation.py](./docs/testing/python_linter_calculations_py.png)
 
 ## Deployment
 
-I deployed early to be able to test the website deployed during the development. Following step are a description of how to deploy a webpage on GitHub:
+- I have used Heroku to deploy this project, following these steps:
+- Login to Heroku
+- Create a new app
+- After that I ahd to fill out the app form.
+- Then I deployed using Github.
+- Connected to the main branch in the project.
+- Then I added CREDS and Config vars. This is because the value in this file is supposed to be hidden, in order for users infomation to be safe. 
+- For the terminl to run correctly, you need to set port to 8000.
+- Then you enable atomatic deployments from main branch.
+- For the last step you deploy the application manually.  
 
-1. Open the []() and find the Settings tab.
-2. The navigate to the tab called Pages on the left.
-3. Choose to Deploy from a branch. For me it was the main branch.
-4. Save it. It can take a few minutes, but then you will be able to find the link to the deployed website in the repository on the menu to the right, under []().
-5. There you'll find the daployes website no top of the page under the heading Active deployments.
-
-My link is: []()
 
 ## Languages
 
@@ -254,6 +256,7 @@ My link is: []()
 - I've used GitHub for repository management.
 - I've used Chat GPT and google translate for some translations and questions.
 - I've used CI Python Linter for testing the python code.
+- I've used Heroku for deploying the CLI application.
 
 ## Usage
 
