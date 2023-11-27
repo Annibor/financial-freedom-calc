@@ -227,6 +227,7 @@ Future features for the CLI are:
 </table>
 
 ### CI Python Linter
+- I have made test in the CI Python Linter throughout the whole developing process. The images show that the code in both run.py and calculations.py files are clear from errors.
 - [CI Python Linter run.py](./docs/testing/python_linter_run_py.png)
 - [CI Python Linter calculation.py](./docs/testing/python_linter_calculations_py.png)
 
