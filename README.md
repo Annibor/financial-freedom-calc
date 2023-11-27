@@ -130,8 +130,14 @@ Future features for the CLI are:
    </tr>
    <tr>
      <td>Enters age</td>
-     <td>User enters age and get followed by welcome message and introduction for the calculation.</td>
-     <td>User enters name and get followed by welcome message and introduction for the calculation.</td>
+     <td>User enters age and get followed by welcome message and introduction for the calculation id age is valid.</td>
+     <td>User enters age and get followed by welcome message and introduction for the calculation if age is valid.</td>
+     <td>Confirmed</td>
+   </tr>
+   <tr>
+     <td>Enters invalid age</td>
+     <td>User enters invalid age and get followed by message: Invalid age. Please enter valid age.</td>
+     <td>User enters invalid age and get followed by welcome message: Invalid age. Please enter valid age.</td>
      <td>Confirmed</td>
    </tr>
    <tr>
