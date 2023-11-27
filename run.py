@@ -149,7 +149,7 @@ def run_calc():
     Make the user select if they want to make another
     claculation or if they want to exit.
     """
-    user_name = user_data()
+    user_name , *_ = user_data()
 
     while True:
         calculation_choice = choose_what_to_calc()
