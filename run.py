@@ -6,6 +6,7 @@ Import needed for the code
 """
 import gspread
 from google.oauth2.service_account import Credentials
+import re
 from calculations import check_if_exit
 from calculations import CalcYearsToFinancialFreedom
 from calculations import CalcRequiredMonthlySavings
@@ -51,7 +52,15 @@ def update_financial_worksheet_two(financial_data_list_two):
     print('Update the financial worksheet...\n')
     financial_worksheet = SHEET.worksheet('financial_sheet_two')
     financial_worksheet.append_row(financial_data_list_two)
-    print('Financial worksheet updated')
+    print('Financial worksheet updated\n')
+
+
+def is_email_valid(email):
+    """
+    Validate email address using regular expression.
+    """
+    email_patterns = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+    return re.match(email_patterns, email) in not None
 
 
 def user_data():
@@ -65,8 +74,15 @@ def user_data():
     print('Welcome to the financial freedom calculator!\n')
     name = input('Please enter your name: \n')
     check_if_exit(name)
-    email = input('Please enter your email address: \n')
-    check_if_exit(email)
+
+    while True:
+        email = input('Please enter your email address: \n')
+        check_if_exit(email)
+
+        if is_email_valid(email):
+            break
+        else:
+            print('Invalid email address. Please enter valid email. \n')
     age = input('Please enter your age: \n')
     check_if_exit(age)
 
@@ -149,6 +165,7 @@ def run_calc():
     Make the user select if they want to make another
     claculation or if they want to exit.
     """
+    # makes only users name show in the prints.
     user_name , *_ = user_data()
 
     while True:
