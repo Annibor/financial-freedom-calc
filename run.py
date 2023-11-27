@@ -75,6 +75,8 @@ def user_data():
     name = input('Please enter your name: \n')
     check_if_exit(name)
 
+    # This email validation is based on Max O'Didilys
+    # youtube tutorial, link in README.md file.
     while True:
         email = input('Please enter your email address: \n')
         check_if_exit(email)
