@@ -99,9 +99,12 @@ def user_data():
     print(f'Hello {name}!\n')
 
     # This gives user a introduction to the calculator.
-    print('This program will calculate the number of years it takes'
-          'to reach finanicial freedom, or how much you need to save'
-          'each month to reach the finanicial freedom in a certain years.\n')
+    print("""
+This program will calculate the number of years it takes
+to reach finanicial freedom, or how much you need to save 
+each month to reach your finanicial freedom within a 
+certain amount of years.\n
+    """)
     return user_data_list
 
 
@@ -184,25 +187,30 @@ def run_calc():
             # for the user, and the name the user added in
             # the beginning of the program will be shown.
             result = calculation_choice.calc_years_to_financial_freedom()
-            print(f'{user_name}, it will take {result:.2f} years '
-                  'to reach the finanicial freedom.\n')
+            print(f"""
+{user_name}, it will take {result:.2f} years
+to reach the finanicial freedom.\n
+""")
 
         elif isinstance(calculation_choice, CalcRequiredMonthlySavings):
             # This will show the results of the second calculation
             # for the user, and the name the user added in
             # the beginning of the program will be shown.
             result = calculation_choice.calc_required_monthly_savings()
-            print(f'{user_name}, you will need to save {result:.2f} euros '
-                  'every month to reach your financial goal.\n')
+            print(f"""
+{user_name}, you will need to save
+{result:.2f} euros every month to reach
+your financial goal.\n""")
 
         # This will give the user a choice if user wants
         # to make another calculation or not.
-        repeat = (input('Do you want to make a new calculation?'
-                        '(yes/no): ').lower())
+        repeat = (input('Do you want to make a new calculation? '
+                        '(yes/no): \n').lower())
         check_if_exit(repeat)
 
         if repeat != 'yes':
-            print(f"""Thank you {user_name}, for using
+            print(f"""
+Thank you {user_name}, for using
 the Financial Freedom Calculator.
 See you next time! \n""")
             break
