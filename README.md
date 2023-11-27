@@ -227,23 +227,35 @@ Future features for the CLI are:
 </table>
 
 ### CI Python Linter
-- I have made tests in the CI Python Linter throughout the whole developing process. The images show that the code in both run.py and calculations.py files are clear from errors.
+- I've implemented comprehensive tests within the CI Python Linter throughout the entire development process. The provided images confirm that the code in both `run.py` and `calculations.py` files is free from errors.
+
 - [CI Python Linter run.py](./docs/testing/python_linter_run_py.png)
 - [CI Python Linter calculation.py](./docs/testing/python_linter_calculations_py.png)
 
 ## Deployment
 
-- I have used Heroku to deploy this project, following these steps:
-- Login to Heroku
-- Create a new app
-- After that I ahd to fill out the app form.
-- Then I deployed using Github.
-- Connected to the main branch in the project.
-- Then I added CREDS and Config vars. This is because the value in this file is supposed to be hidden, in order for users infomation to be safe. 
-- For the terminl to run correctly, you need to set port to 8000.
-- Then you enable atomatic deployments from main branch.
-- For the last step you deploy the application manually.  
+This project is deployed on Heroku, and the deployment process involves the following steps:
 
+1. **Heroku Setup:**
+   - Log in to Heroku.
+   - Create a new app.
+   - Fill out the app form.
+
+2. **Deployment from Github:**
+   - Deploy the project using GitHub.
+   - Connect to the main branch in the project repository.
+
+3. **Configuration:**
+   - Add necessary credentials (CREDS) and configuration variables (Config vars) to ensure the security of user information. These values should be hidden to safeguard sensitive data.
+
+4. **Terminal Setup:**
+   - Set the port to 8000 for the terminal to run correctly.
+
+5. **Automatic Deployments:**
+   - Enable automatic deployments from the main branch to streamline the deployment process.
+
+6. **Manual Deployment:**
+   - Deploy the application manually for the application to work, and after that the automatic deployments should work.
 
 ## Languages
 
