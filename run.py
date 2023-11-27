@@ -4,9 +4,9 @@
 """
 Import needed for the code
 """
+import re
 import gspread
 from google.oauth2.service_account import Credentials
-import re
 from calculations import check_if_exit
 from calculations import CalcYearsToFinancialFreedom
 from calculations import CalcRequiredMonthlySavings
@@ -60,7 +60,7 @@ def is_email_valid(email):
     Validate email address using regular expression.
     """
     email_patterns = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
-    return re.match(email_patterns, email) in not None
+    return re.match(email_patterns, email) is not None
 
 
 def user_data():
