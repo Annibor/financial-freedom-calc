@@ -101,8 +101,8 @@ def user_data():
     # This gives user a introduction to the calculator.
     print("""
 This program will calculate the number of years it takes
-to reach finanicial freedom, or how much you need to save 
-each month to reach your finanicial freedom within a 
+to reach finanicial freedom, or how much you need to save
+each month to reach your finanicial freedom within a
 certain amount of years.\n
     """)
     return user_data_list
@@ -177,7 +177,7 @@ def run_calc():
     claculation or if they want to exit.
     """
     # makes only users name show in the prints.
-    user_name , *_ = user_data()
+    user_name, *_ = user_data()
 
     while True:
         calculation_choice = choose_what_to_calc()
