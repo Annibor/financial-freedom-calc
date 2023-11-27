@@ -287,10 +287,18 @@ I would like to express my gratitude to the following individuals who have made 
 
 - **Michel**: My wonderful boyfriend, whose unwavering support and encouragement have been my constant motivation.
 
-- ****: 
+- **Anthony**: My mentor who have guided me through this project.
 
 ## What I've Learned
 
-During the development of this project, I've gained valuable insights and skills that have enriched my coding journey. Here are some of the key takeaways:
+During the development of this project, I encountered various challenges and gained valuable insights. Here are some of the key takeaways:
 
-- ****: 
+- **Python**: This project served as a substatinal learning oppurtunity fo rprovign my Python programming skills. I tackled complex problems, implemented algorithms ans enhanced my understanding of Python's syntax and features.
+
+- **Testing in  CI Python Linter**: I have learned to use Python Linter as a toll to help catch potential issues early on in the development process as well as in the end of the process.
+
+- **Problem-solving**: This project ahve definitly tested my  problem-solving skills and resilience. Overcoming hurdles and debugging issues strengthened my ability ti troubleshoot and find effective solutions. 
+
+- **Flowchart**: I have leaned how to make flowcharts to follow theroughout the development process for project.
+
+- I thnink all the things I have learned during this process will hwlp mw become a better develeoper as well as a better version of me.
