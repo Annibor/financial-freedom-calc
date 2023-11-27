@@ -226,6 +226,10 @@ Future features for the CLI are:
   </tbody>
 </table>
 
+### CI Python Linter
+- [CI Python Linter run.py](./docs/testing/python_linter_run_py.png)
+- [CI Python Linter calculation.py](./docs/testing/python_linter_calculations_py.png)
+
 ## Deployment
 
 I deployed early to be able to test the website deployed during the development. Following step are a description of how to deploy a webpage on GitHub:
