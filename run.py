@@ -83,8 +83,14 @@ def user_data():
             break
         else:
             print('Invalid email address. Please enter valid email. \n')
-    age = input('Please enter your age: \n')
-    check_if_exit(age)
+    while True:
+        age = input('Please enter your age: \n')
+        check_if_exit(age)
+
+        if age.isdigit():
+            break
+        else:
+            print('Invalid age. Please enter valid age. \n')
 
     user_data_list = [name, age, email]
     update_user_worksheet(user_data_list)
