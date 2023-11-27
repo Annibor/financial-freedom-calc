@@ -10,7 +10,7 @@ Welcome to Financial Freedom Calculator! This is a python program designed to as
 2. **Calculate Required Monthly Savings:** This calculates the monthly savings needed to achive the users financial goal within the a specified time frame.
 
 
-![Am I Responsive Screenshot](.docs/img/am_i_responsive_finance_calc.png)
+![Am I Responsive Screenshot](./docs/img/am_i_responsive_finance_calc.png)
 
 ## Table of Content
 
