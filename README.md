@@ -43,9 +43,6 @@ The primary goals for the Financial Freedom Calculator are to:
 - Provide users with a tool to calculate the number of years required to achive financial freedom.
 - Assist the user in determining the monthly savings needed to reach financial freedom within a certain period of time.
 
-### User-Centered Approach
-
-
 #### As a General user
 
 - Recive clear instructions for using the calculator.
@@ -55,6 +52,14 @@ The primary goals for the Financial Freedom Calculator are to:
 
 - Understand the outcomes of calculations.
 - Recive infomation about each step in the calculation.
+
+### Flowchart
+
+- **Flowchart of the project**:
+- These two images show the flowchart for the project. I decided to split the flowchart into two images so you can mor easily read the flowchart, rather than haveing a large image that is barely readable.
+
+- ![Flowchart image part one, of the start and user data inputs.](./docs/img/flowchart_part_one.png)
+- ![Flowchart image part two, of the different calculations for the project](./docs/img/flowchart_part_two.png)
 
 ### Features
 
