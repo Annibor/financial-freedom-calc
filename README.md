@@ -4,10 +4,10 @@
 
 # Introduction
 
-Welcome to Financial Freedom Calculator! This is a python program designed to assiste users in planning their financial journey. This calculator provides two main functionalities:
+Welcome to Financial Freedom Calculator! This is a python program designed to assist users in planning their financial journey an dgoals. This calculator provides two main functionalities:
 
-1. **Calculate Years Until Financial Freedom:** This determine the number of years it takes to reach financial frredom based on the users initial savings, monthly savings thir financial goals. 
-2. **Calculate Required Monthly Savings:** This calculates the monthly savings needed to achive the users financial goal within the a specified time frame.
+1. **Calculate Years Until Financial Freedom:** This determine the number of years it takes to reach financial frredom based on the users initial savings, monthly savings and their financial goals. 
+2. **Calculate Required Monthly Savings:** This calculates the monthly savings needed to achive the users financial goal within the specified time frame the user have choosen.
 
 
 ![Am I Responsive Screenshot](./docs/img/am_i_responsive_finance_calc.png)
@@ -260,6 +260,7 @@ This project is deployed on Heroku, and the deployment process involves the foll
 ## Languages
 
 - This CLI was built using python.
+- Other languages in the program are html and javascript, but I haven't used them, becase they where already in the template we students have to use to create the project from the start.
 
 ## Software
 
@@ -317,8 +318,8 @@ During the development of this project, I encountered various challenges and gai
 
 - **Testing in  CI Python Linter**: I have learned to use Python Linter as a toll to help catch potential issues early on in the development process as well as in the end of the process.
 
-- **Problem-solving**: This project ahve definitly tested my  problem-solving skills and resilience. Overcoming hurdles and debugging issues strengthened my ability ti troubleshoot and find effective solutions. 
+- **Problem-solving**: This project have definitly tested my problem-solving skills. Overcoming problems and debugging issues strengthened my ability to troubleshoot and find effective solutions for the project. 
 
-- **Flowchart**: I have leaned how to make flowcharts to follow theroughout the development process for project.
+- **Flowchart**: I have leaned how to make flowcharts to follow throughout the development process for the project.
 
-- I thnink all the things I have learned during this process will hwlp mw become a better develeoper as well as a better version of me.
+- I think all the things I have learned during this process will hwlp mw become a better develeoper as well as a better version of me.
