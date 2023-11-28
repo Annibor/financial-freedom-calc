@@ -18,9 +18,14 @@ Welcome to Financial Freedom Calculator! This is a python program designed to as
   - [**Table of Content**](#table-of-content)
   - [**Planning & development**](#planning--developmnet)
     - [**Project Goals**](#project-goals)
+       - [**As a General User**](#as-a-general-user)
+       - [**As a New User**](#as-a-new-user)
+    - [**Project Flowchart**](#project-flowchart)
+    - [**Features**](#features)
     - [**Future Features**](#future-features)
   - [**Testing**](#testing)
-  - [**Devtools**](#devtools)
+    - [**Manual Tesing**](#manual-testing)
+    - [**CI Python Linter**](#ci-python-linter)
   - [**Deployment**](#deployment)
   - [**Languages**](#languages)
   - [**Software**](#software)
@@ -30,8 +35,8 @@ Welcome to Financial Freedom Calculator! This is a python program designed to as
   - [**Private Use**](#private-use)
   - [**Liability**](#liability)
   - [**Credits**](#credits)
-  - [**Content**](#content)
-  - [**Special thanks**](#special-thanks)
+    - [**Content**](#content)
+    - [**Special thanks**](#special-thanks)
   - [**What I've learned**](#what-ive-learned)
 
 ## Planning & developmnet
@@ -86,21 +91,31 @@ The primary goals for the Financial Freedom Calculator are to:
 
 ### Future Features
 
-Due to the lack of time during this project, I didn't had th epossibility to implement everything I wanted, but instead I've added these features to future features for this project. 
+While time constraints limited the scope of this project, several features have been earmarked for future implementation. The envisioned enhancements for the CLI include:
 
-Future features for the CLI are:
-- Additional financial planning tools.
-- Make calculations work if user wants to input yearly or monthly interest rates.
-- Making it possible for user to save and send the calculations to their emails.
-- Making a calculation that includes the actual spenings for the user each month. 
-- Make it collect actual savings for the user. 
-- When adding above feautres it would be necessary to include a login and password for users, so their account and data will be saved. 
+- **Additional Financial Planning Tools:**
+  - Expand the repertoire of financial planning tools available to users.
+
+- **Flexible Interest Rate Calculations:**
+  - Enable calculations to accommodate user preferences for inputting yearly or monthly interest rates.
+
+- **Email Integration for Calculations:**
+  - Facilitate the saving and sending of calculations to users' email addresses.
+
+- **Incorporate Monthly Spending Calculations:**
+  - Develop a feature that incorporates actual monthly spending data into calculations.
+
+- **Real-time Savings Tracker:**
+  - Implement a mechanism to track and display users' actual savings.
+
+- **User Authentication and Data Persistence:**
+  - Introduce user login credentials and password functionality to ensure account security and persistent data storage for the aforementioned features.
 
 
 
 ## Testing
 
-- Throughout the whole development of the webpage, I've made tests in:
+- Throughout the whole development of the application, I've tested the application both manually as well as with the CI Python Linter.
 
 
 ### Manual testing
@@ -272,7 +287,7 @@ This project is deployed on Heroku, and the deployment process involves the foll
 ## Languages
 
 - This CLI was built using python.
-- Other languages in the program are html and javascript, but I haven't used them, becase they where already in the template we students have to use to create the project from the start.
+- Other languages in the program are html and javascript, but I haven't used them, because they where already in the template we students have to use to create the project from the start.
 
 ## Software
 
@@ -309,6 +324,7 @@ This project is deployed on Heroku, and the deployment process involves the foll
 
 - This README is based upon two sourses for guidance: one by Davis Calikes, available at [GitHub](https://github.com/davidcalikes/portfolio-project-one#readme), and another authored by me, available at [GitHub](https://github.com/Annibor/EarthEcho-Studios/blob/main/README.md)
 - Usage, Modification, Distrubition, Private Use and Liability Content: The guidelines pertaining to usage, modification, distribution, private use, and liability are directly derived from my project, accessible at [GitHub](https://github.com/Annibor/EarthEcho-Studios/blob/main/README.md)
+- Deployment section in this README.de file is based on Shane-Donlons [GitHub](https://github.com/Shane-Donlon/pp3-hacked-game) project.
 - This project is based upon two sources for guidance: one by ismailmoufid47, available at [GitHub](https://github.com/ismailmoufid47/financial_calculator/blob/main/calculations/calculations.py) and one by Akash3121, available at [GitHub](https://github.com/tuomaskivioja/5-super-quick-automation-ideas/blob/main/wealth_calculator.py).
 - The code for the email validation is based on [Youtube](https://www.youtube.com/watch?v=-PIJtwJwwOE) by Max O'Didily.
 - The code for importing googlesheets, like SCOPE and Credentials are adapted from Code Institues [GitHub](https://github.com/Code-Institute-Solutions/love-sandwiches-p5-sourcecode).
