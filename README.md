@@ -53,10 +53,13 @@ The primary goals for the Financial Freedom Calculator are to:
 - Understand the outcomes of calculations.
 - Recive infomation about each step in the calculation.
 
-### Flowchart
+### Project Flowchart
 
-- **Flowchart of the project**:
-- These two images show the flowchart for the project. I decided to split the flowchart into two images so you can mor easily read the flowchart, rather than haveing a large image that is barely readable.
+- **Overview**:
+  - The project's flowchart is presented through two distinct images. This decision was made to enhance readability, avoiding the challenge of deciphering a large, unwieldy image.
+
+- **Clarification on "Display Program Information"**:
+  - The element "Display Program Information" is intentionally depicted in both the first and second images. This redundancy serves the purpose of facilitating a seamless understanding of how the flowchart components come together. It's essential to note that, in reality, there is only one occurrence of "Display Program Information" in the overall flowchart.
 
 - ![Flowchart image part one, of the start and user data inputs.](./docs/img/flowchart_part_one.png)
 - ![Flowchart image part two, of the different calculations for the project](./docs/img/flowchart_part_two.png)
@@ -83,11 +86,15 @@ The primary goals for the Financial Freedom Calculator are to:
 
 ### Future Features
 
+Due to the lack of time during this project, I didn't had th epossibility to implement everything I wanted, but instead I've added these features to future features for this project. 
+
 Future features for the CLI are:
 - Additional financial planning tools.
 - Make calculations work if user wants to input yearly or monthly interest rates.
 - Making it possible for user to save and send the calculations to their emails.
-- Making a calculation that includes the aculat spenings for the user each month. 
+- Making a calculation that includes the actual spenings for the user each month. 
+- Make it collect actual savings for the user. 
+- When adding above feautres it would be necessary to include a login and password for users, so their account and data will be saved. 
 
 
 
