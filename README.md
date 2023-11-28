@@ -1,6 +1,6 @@
 # Financial Freedom Calculator
 
-[Financial Freedom Calculator](https://github.com/Annibor/financial-freedom-calc)
+[Financial Freedom Calculator](https://financial-freedom-calculator-6b954dd90a70.herokuapp.com/)
 
 # Introduction
 
@@ -81,7 +81,7 @@ The primary goals for the Financial Freedom Calculator are to:
   - The calculator will determine the monthly savings needed to reach the users financial goal.
 
 - **Exit**: 
-  -The calculator will exit the program if user enters 'exit' in any of the inputs within the calculator. 
+  - The calculator will exit the program if user enters 'exit' in any of the inputs within the calculator. 
 
 - **Option to rerun a calculation**: 
   - When a calculation is done, the calculator will ask the user if it would like to make another calculation. 
@@ -256,8 +256,8 @@ While time constraints limited the scope of this project, several features have 
 ### CI Python Linter
 - I've implemented comprehensive tests within the CI Python Linter throughout the entire development process. The provided images confirm that the code in both `run.py` and `calculations.py` files is free from errors.
 
-- [CI Python Linter run.py](./docs/testing/python_linter_run_py.png)
-- [CI Python Linter calculation.py](./docs/testing/python_linter_calculations_py.png)
+- ![CI Python Linter run.py](./docs/testing/python_linter_run_py.png)
+- ![CI Python Linter calculation.py](./docs/testing/python_linter_calculations_py.png)
 
 ## Deployment
 
@@ -283,6 +283,8 @@ This project is deployed on Heroku, and the deployment process involves the foll
 
 6. **Manual Deployment:**
    - Deploy the application manually for the application to work, and after that the automatic deployments should work.
+
+Link to my deployed application [Heroku](https://financial-freedom-calculator-6b954dd90a70.herokuapp.com/).
 
 ## Languages
 
