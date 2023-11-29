@@ -5,6 +5,7 @@
 Import needed for the code
 """
 import re
+import uuid
 import gspread
 from google.oauth2.service_account import Credentials
 from calculations import check_if_exit
@@ -23,35 +24,35 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('financial-freedom-calc')
 
 
-def update_user_worksheet(user_data_list):
+def update_user_worksheet(user_id, user_data_list):
     """Update the user worksheet. Add new
     information to the worksheet from user input.
     """
     print('Update the user worksheet...\n')
     user_worksheet = SHEET.worksheet('user_sheet')
-    user_worksheet.append_row(user_data_list)
+    user_worksheet.append_row([user_id] + user_data_list)
     print('User worksheet updated')
 
 
-def update_financial_worksheet_one(financial_data_list_one):
+def update_financial_worksheet_one(user_id, financial_data_list_one):
     """
     Update the financial worksheet one. Add new
     information to the worksheet from user inputs in choice one.
     """
     print('Update the financial worksheet...\n')
     financial_worksheet = SHEET.worksheet('financial_sheet_one')
-    financial_worksheet.append_row(financial_data_list_one)
+    financial_worksheet.append_row([user_id] + financial_data_list_one)
     print('Financial worksheet updated')
 
 
-def update_financial_worksheet_two(financial_data_list_two):
+def update_financial_worksheet_two(user_id, financial_data_list_two):
     """
     Update the financial worksheet two. Add new
     information to the worksheet from user inputs in choice two.
     """
     print('Update the financial worksheet...\n')
     financial_worksheet = SHEET.worksheet('financial_sheet_two')
-    financial_worksheet.append_row(financial_data_list_two)
+    financial_worksheet.append_row([user_id] + financial_data_list_two)
     print('Financial worksheet updated\n')
 
 
@@ -94,21 +95,25 @@ def user_data():
         else:
             print('Invalid age. Please enter valid age. \n')
 
+    user_id = str(uuid.uuid4())
     user_data_list = [name, age, email]
-    update_user_worksheet(user_data_list)
-    print(f'Hello {name}!\n')
-
-    # This gives user a introduction to the calculator.
-    print("""
+    update_user_worksheet(user_id, user_data_list)
+    placeholder_data_list = ["Placeholder"] * 3
+    update_financial_worksheet_one(user_id, placeholder_data_list)
+    update_financial_worksheet_two(user_id, placeholder_data_list)
+    print(f"""
+Hello {name}!\n
 This program will calculate the number of years it takes
-to reach finanicial freedom, or how much you need to save
-each month to reach your finanicial freedom within a
+to reach financial freedom, or how much you need to save
+each month to reach your financial freedom within a
 certain amount of years.\n
     """)
-    return user_data_list
 
 
-def choose_what_to_calc():
+    return user_id, user_data_list
+
+
+def choose_what_to_calc(user_id):
     """
     Choose what to calculate.
 
@@ -138,14 +143,14 @@ freedom in a certain years\n
                 initial_savings, monthly_savings, financial_goal))
             financial_data_list_one = [initial_savings, monthly_savings,
                                        financial_goal]
-            update_financial_worksheet_one(financial_data_list_one)
+            update_financial_worksheet_one(user_id, financial_data_list_one)
 
             return years_to_financial_freedom
         except ValueError:
             # Shows error message if user enters anything else than digits.
             print('Invalid input. Answers must be numeric values.'
                   'Please try again.\n')
-            return choose_what_to_calc()
+            return choose_what_to_calc(user_id)
     elif choice == '2':
         try:
             # Get user inputs for the second calculation.
@@ -159,28 +164,33 @@ freedom in a certain years\n
                 initial_savings_two, target_goal_two, target_years_to_freedom))
             financial_data_list_two = [initial_savings_two, target_goal_two,
                                        target_years_to_freedom]
-            update_financial_worksheet_two(financial_data_list_two)
+            update_financial_worksheet_two(user_id, financial_data_list_two)
             return required_monthly_savings
         except ValueError:
             # Shows error message if user enters anything else than digits.
             print('Invalid input. Answers must be numeric values.'
                   'Please try again.\n')
-            return choose_what_to_calc()
+            return choose_what_to_calc(user_id)
     else:
         print('Invalid choice. Please try again.\n')
-        choose_what_to_calc()
+        choose_what_to_calc(user_id)
 
 
-def run_calc():
+def run_calc(user_id):
     """
     Make the user select if they want to make another
     claculation or if they want to exit.
     """
     # makes only users name show in the prints.
-    user_name, *_ = user_data()
+        # makes only users name show in the prints.
+    user_sheet = SHEET.worksheet('user_sheet')
+    user_name_cell = user_sheet.find(user_id)
+    user_name = user_sheet.cell(user_name_cell.row, 2).value
+
+
 
     while True:
-        calculation_choice = choose_what_to_calc()
+        calculation_choice = choose_what_to_calc(user_id)
 
         if isinstance(calculation_choice, CalcYearsToFinancialFreedom):
             # This will show the results of the first calculation
@@ -221,7 +231,8 @@ def main():
     Main function that calls the run_calc function
     that will make the calculation available for the user.
     """
-    run_calc()
+    user_id, *_ = user_data()
+    run_calc(user_id)
 
 
 if __name__ == '__main__':
