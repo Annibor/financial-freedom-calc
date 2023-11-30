@@ -28,10 +28,10 @@ def update_user_worksheet(user_id, user_data_list):
     """Update the user worksheet. Add new
     information to the worksheet from user input.
     """
-    print('Update the user worksheet...\n')
+    print('Update the user worksheet...')
     user_worksheet = SHEET.worksheet('user_sheet')
     user_worksheet.append_row([user_id] + user_data_list)
-    print('User worksheet updated')
+    print('User worksheet updated\n')
 
 
 def update_financial_worksheet_one(user_id, financial_data_list_one):
@@ -39,10 +39,10 @@ def update_financial_worksheet_one(user_id, financial_data_list_one):
     Update the financial worksheet one. Add new
     information to the worksheet from user inputs in choice one.
     """
-    print('Update the financial worksheet...\n')
+    print('Update the financial worksheet...')
     financial_worksheet = SHEET.worksheet('financial_sheet_one')
     financial_worksheet.append_row([user_id] + financial_data_list_one)
-    print('Financial worksheet updated')
+    print('Financial worksheet updated\n')
 
 
 def update_financial_worksheet_two(user_id, financial_data_list_two):
@@ -50,7 +50,7 @@ def update_financial_worksheet_two(user_id, financial_data_list_two):
     Update the financial worksheet two. Add new
     information to the worksheet from user inputs in choice two.
     """
-    print('Update the financial worksheet...\n')
+    print('Update the financial worksheet...')
     financial_worksheet = SHEET.worksheet('financial_sheet_two')
     financial_worksheet.append_row([user_id] + financial_data_list_two)
     print('Financial worksheet updated\n')
