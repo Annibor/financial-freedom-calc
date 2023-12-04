@@ -128,8 +128,6 @@ freedom in a certain years\n
     choice = input('Enter your choice: \n')
     check_if_exit(choice)
 
-    calculation1_complete = False
-    calculation2_complete = False
 
     if choice == '1':
         try:
@@ -146,8 +144,7 @@ freedom in a certain years\n
                                        financial_goal]
             update_financial_worksheet_one(user_id, financial_data_list_one)
 
-            calculation1_complete = True
-            return years_to_financial_freedom, calculation1_complete
+            return years_to_financial_freedom
         except ValueError:
             # Shows error message if user enters anything else than digits.
             print('Invalid input. Answers must be numeric values.'
@@ -168,8 +165,7 @@ freedom in a certain years\n
                                        target_years_to_freedom]
             update_financial_worksheet_two(user_id, financial_data_list_two)
 
-            calculation2_complete = True
-            return required_monthly_savings, calculation2_complete
+            return required_monthly_savings
         except ValueError:
             # Shows error message if user enters anything else than digits.
             print('Invalid input. Answers must be numeric values.'
@@ -206,6 +202,7 @@ def run_calc(user_id):
 {user_name}, it will take {result:.2f} years
 to reach the finanicial freedom.\n
 """)
+            calculation1_complete = True
 
         elif isinstance(calculation_choice, CalcRequiredMonthlySavings):
             # This will show the results of the second calculation
@@ -216,6 +213,7 @@ to reach the finanicial freedom.\n
 {user_name}, you will need to save
 {result:.2f} euros every month to reach
 your financial goal.\n""")
+            calculation2_complete = True
 
         # This will give the user a choice if user wants
         # to make another calculation or not.
