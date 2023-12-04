@@ -98,9 +98,7 @@ def user_data():
     user_id = str(uuid.uuid4())
     user_data_list = [name, age, email]
     update_user_worksheet(user_id, user_data_list)
-    placeholder_data_list = ["Placeholder"] * 3
-    update_financial_worksheet_one(user_id, placeholder_data_list)
-    update_financial_worksheet_two(user_id, placeholder_data_list)
+    
     print(f"""
 Hello {name}!\n
 This program will calculate the number of years it takes
@@ -130,6 +128,9 @@ freedom in a certain years\n
     choice = input('Enter your choice: \n')
     check_if_exit(choice)
 
+    calculation1_complete = False
+    calculation2_complete = False
+
     if choice == '1':
         try:
             # Get user inputs for the first calcualtion.
@@ -145,7 +146,8 @@ freedom in a certain years\n
                                        financial_goal]
             update_financial_worksheet_one(user_id, financial_data_list_one)
 
-            return years_to_financial_freedom
+            calculation1_complete = True
+            return years_to_financial_freedom, calculation1_complete
         except ValueError:
             # Shows error message if user enters anything else than digits.
             print('Invalid input. Answers must be numeric values.'
@@ -165,7 +167,9 @@ freedom in a certain years\n
             financial_data_list_two = [initial_savings_two, target_goal_two,
                                        target_years_to_freedom]
             update_financial_worksheet_two(user_id, financial_data_list_two)
-            return required_monthly_savings
+
+            calculation2_complete = True
+            return required_monthly_savings, calculation2_complete
         except ValueError:
             # Shows error message if user enters anything else than digits.
             print('Invalid input. Answers must be numeric values.'
@@ -187,7 +191,8 @@ def run_calc(user_id):
     user_name_cell = user_sheet.find(user_id)
     user_name = user_sheet.cell(user_name_cell.row, 2).value
 
-
+    calculation1_complete = False
+    calculation2_complete = False
 
     while True:
         calculation_choice = choose_what_to_calc(user_id)
@@ -225,6 +230,12 @@ the Financial Freedom Calculator.
 See you next time! \n""")
             break
 
+    if not calculation1_complete or not calculation2_complete:
+        print("Adding placeholders for incomplete calculations...\n")
+        if not calculation1_complete:
+            update_financial_worksheet_one(user_id, ['Placeholder'] * 3)
+        if not calculation2_complete:
+            update_financial_worksheet_two(user_id, ['Placeholder'] * 3)
 
 def main():
     """
