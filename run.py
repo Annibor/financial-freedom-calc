@@ -28,47 +28,51 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('financial-freedom-calc')
 
-# The code for the googlesheet update with input information
-# are based on Code Institutes Love Sandwiches, (Link in README.md).
+
 def update_user_worksheet(user_id, user_data_list):
     """Update the user worksheet. Add new
     information to the worksheet from user input.
     """
+    # The code for the googlesheet update with input information
+    # are based on Code Institutes Love Sandwiches, (Link in README.md).
     print('Update the user worksheet...')
     user_worksheet = SHEET.worksheet('user_sheet')
     user_worksheet.append_row([user_id] + user_data_list)
     print('User worksheet updated\n')
 
-# The code for the googlesheet update with input information
-# are based on Code Institutes Love Sandwiches, (Link in README.md).
+
 def update_financial_worksheet_one(user_id, financial_data_list_one):
     """
     Update the financial worksheet one. Add new
     information to the worksheet from user inputs in choice one.
     """
+    # The code for the googlesheet update with input information
+    # are based on Code Institutes Love Sandwiches, (Link in README.md).
     print('Update the financial worksheet...')
     financial_worksheet = SHEET.worksheet('financial_sheet_one')
     financial_worksheet.append_row([user_id] + financial_data_list_one)
     print('Financial worksheet updated\n')
 
-# The code for the googlesheet update with input information
-# are based on Code Institutes Love Sandwiches, (Link in README.md).
+
 def update_financial_worksheet_two(user_id, financial_data_list_two):
     """
     Update the financial worksheet two. Add new
     information to the worksheet from user inputs in choice two.
     """
+    # The code for the googlesheet update with input information
+    # are based on Code Institutes Love Sandwiches, (Link in README.md).
     print('Update the financial worksheet...')
     financial_worksheet = SHEET.worksheet('financial_sheet_two')
     financial_worksheet.append_row([user_id] + financial_data_list_two)
     print('Financial worksheet updated\n')
 
-# This email validation is based on Max O'Didilys
-# youtube tutorial, link in README.md file.
+
 def is_email_valid(email):
     """
     Validate email address using regular expression.
     """
+    # This email validation is based on Max O'Didilys
+    # youtube tutorial, link in README.md file.
     email_patterns = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
     return re.match(email_patterns, email) is not None
 
@@ -118,7 +122,7 @@ certain amount of years.\n
 
 def choose_what_to_calc(user_id):
     """
-    Makes the user choose what type of calcualtion they 
+    Makes the user choose what type of calcualtion they
     want to do. Calcualation 1 or calculation 2.
     """
     print("""
