@@ -99,7 +99,7 @@ def user_data():
         if age.isdigit():
             break
         else:
-            print('Invalid age. Please enter valid age. \n')
+            print('Invalid age. Please enter valid age (numeric value). \n')
 
     user_id = str(uuid.uuid4())
     user_data_list = [name, age, email]
