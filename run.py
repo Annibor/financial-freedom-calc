@@ -98,7 +98,7 @@ def user_data():
     user_id = str(uuid.uuid4())
     user_data_list = [name, age, email]
     update_user_worksheet(user_id, user_data_list)
-    
+
     print(f"""
 Hello {name}!\n
 This program will calculate the number of years it takes
