@@ -211,7 +211,19 @@ While time constraints limited the scope of this project, several features have 
     <tr>
      <td>Calc. 2 when error - restart</td>
      <td>Calulation restarts if user inputs anything but digits.</td>
-     <td>Restart for user to rechoose whtat calculation to do.</td>
+     <td>Restart for user to rechoose what calculation to do.</td>
+     <td>Confirmed</td>
+   </tr>
+   <tr>
+     <td>Initial savings are equal or grater than the financial goal. Calc. 1</td>
+     <td>If initial savings input are equal or grater than financial goal input, the user should get a congratualtions message, the calculation will end and user can choose to make a new calculation.</td>
+     <td>When initial savings are equal or grater than financial goal, the user get a Congratulations message, the calclulation will stop and user get the option to make a new calculation or not.</td>
+     <td>Confirmed</td>
+   </tr>
+   <tr>
+     <td>Initial savings are equal or grater than the target goal. Calc. 2</td>
+     <td>If initial savings input are equal or grater than target goal input, the user should get a congratualtions message, the calculation will end and user can choose to make a new calculation.</td>
+     <td>When initial savings are equal or grater than target goal, the user get a Congratulations message, the calclulation will stop and user get the option to make a new calculation or not.</td>
      <td>Confirmed</td>
    </tr>
    <tr>
