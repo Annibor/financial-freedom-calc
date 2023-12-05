@@ -107,7 +107,6 @@ each month to reach your financial freedom within a
 certain amount of years.\n
     """)
 
-
     return user_id, user_data_list
 
 
@@ -127,7 +126,6 @@ freedom in a certain years\n
     """)
     choice = input('Enter your choice: \n')
     check_if_exit(choice)
-
 
     if choice == '1':
         try:
@@ -182,7 +180,7 @@ def run_calc(user_id):
     claculation or if they want to exit.
     """
     # makes only users name show in the prints.
-        # makes only users name show in the prints.
+    # makes only users name show in the prints.
     user_sheet = SHEET.worksheet('user_sheet')
     user_name_cell = user_sheet.find(user_id)
     user_name = user_sheet.cell(user_name_cell.row, 2).value
@@ -234,6 +232,7 @@ See you next time! \n""")
             update_financial_worksheet_one(user_id, ['Placeholder'] * 3)
         if not calculation2_complete:
             update_financial_worksheet_two(user_id, ['Placeholder'] * 3)
+
 
 def main():
     """
