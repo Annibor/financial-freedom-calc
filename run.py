@@ -7,14 +7,14 @@ Import needed for the code
 import re
 import uuid
 # googlesheets imports are adapted from Code Institutes
-# Love Math (Link in README.md).
+# Love Sandwiches (Link in README.md).
 import gspread
 from google.oauth2.service_account import Credentials
 from calculations import check_if_exit
 from calculations import CalcYearsToFinancialFreedom
 from calculations import CalcRequiredMonthlySavings
 
-# SCOPE are adapted from Code Institutes Love Math,
+# SCOPE are adapted from Code Institutes Love Sandwiches,
 # (Link in README.md).
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -22,14 +22,14 @@ SCOPE = [
     "https://www.googleapis.com/auth/drive"
     ]
 # CREDS,SCOPED_CREDS, GSPREAD_CLIENT & SHEET are
-# adapted from Code Institute Love Math (Link in README.md).
+# adapted from Code Institute Love Sandwiches (Link in README.md).
 CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('financial-freedom-calc')
 
 # The code for the googlesheet update with input information
-# are based on Code Institutes Love Math, (Link in README.md).
+# are based on Code Institutes Love Sandwiches, (Link in README.md).
 def update_user_worksheet(user_id, user_data_list):
     """Update the user worksheet. Add new
     information to the worksheet from user input.
@@ -40,7 +40,7 @@ def update_user_worksheet(user_id, user_data_list):
     print('User worksheet updated\n')
 
 # The code for the googlesheet update with input information
-# are based on Code Institutes Love Math, (Link in README.md).
+# are based on Code Institutes Love Sandwiches, (Link in README.md).
 def update_financial_worksheet_one(user_id, financial_data_list_one):
     """
     Update the financial worksheet one. Add new
@@ -52,7 +52,7 @@ def update_financial_worksheet_one(user_id, financial_data_list_one):
     print('Financial worksheet updated\n')
 
 # The code for the googlesheet update with input information
-# are based on Code Institutes Love Math, (Link in README.md).
+# are based on Code Institutes Love Sandwiches, (Link in README.md).
 def update_financial_worksheet_two(user_id, financial_data_list_two):
     """
     Update the financial worksheet two. Add new
@@ -77,9 +77,6 @@ def user_data():
     """
     Get user data and welcome to the program.
     And update the google worksheet with user data.
-
-    Returns:
-         str: User's name.
     """
     print('Welcome to the financial freedom calculator!\n')
     name = input('Please enter your name: \n')
@@ -122,7 +119,7 @@ certain amount of years.\n
 def choose_what_to_calc(user_id):
     """
     Makes the user choose what type of calcualtion they 
-    want to do. Calualtion1 or calculation 2.
+    want to do. Calcualation 1 or calculation 2.
     """
     print("""
 Please choose what you want to calculate:\n
