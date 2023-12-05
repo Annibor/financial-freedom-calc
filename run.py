@@ -137,10 +137,11 @@ freedom in a certain years\n
             financial_goal = (float(input(
                 'Please enter your financial goal in euro: \n')))
 
-            # Check if initial savings are grater than the financial target goal.
+            # Check if initial savings are equal or grater than
+            # the financial target goal.
             if initial_savings >= financial_goal:
                 print('Congratulations! You have already '
-                        'reached you financial goal.')
+                      'reached you financial goal.')
                 return None
 
             years_to_financial_freedom = (CalcYearsToFinancialFreedom(
@@ -163,10 +164,11 @@ freedom in a certain years\n
             target_goal_two = (float(input(
                 'Please enter your target goal in euro: \n')))
 
-            # Check if initial savings are grater than the financial target goal.
+            # Check if initial savings are equal or grater
+            # than the financial target goal.
             if initial_savings_two >= target_goal_two:
                 print('Congratulations! You have already '
-                        'reached you financial goal.')
+                      'reached you financial goal.')
                 return None
 
             target_years_to_freedom = (float(input(
